@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "812563847912",
+    "project_id": "tsunagari-xg8uvv",
+    "storage_bucket": "tsunagari-xg8uvv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812563847912:android:4a2cc4fb59c1438e76475d",
+        "android_client_info": {
+          "package_name": "com.mycompany.tsunagari"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmBr1KPq-c7bZxRPloZWsi3Xea1Ax8LOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
