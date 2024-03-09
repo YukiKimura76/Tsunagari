@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'subscription_select_model.dart';
 export 'subscription_select_model.dart';
 
@@ -53,7 +50,7 @@ class _SubscriptionSelectWidgetState extends State<SubscriptionSelectWidget> {
                   fontSize: 22.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -63,7 +60,7 @@ class _SubscriptionSelectWidgetState extends State<SubscriptionSelectWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Text(
-                'Hello World',
+                'Hello World Push test',
                 style: FlutterFlowTheme.of(context).bodyMedium,
               ),
             ],
