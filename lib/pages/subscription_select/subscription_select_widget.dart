@@ -4,27 +4,26 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'home_page_model.dart';
-export 'home_page_model.dart';
+import 'subscription_select_model.dart';
+export 'subscription_select_model.dart';
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({super.key});
+class SubscriptionSelectWidget extends StatefulWidget {
+  const SubscriptionSelectWidget({super.key});
 
   @override
-  State<HomePageWidget> createState() => _HomePageWidgetState();
+  State<SubscriptionSelectWidget> createState() =>
+      _SubscriptionSelectWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
-  late HomePageModel _model;
+class _SubscriptionSelectWidgetState extends State<SubscriptionSelectWidget> {
+  late SubscriptionSelectModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => HomePageModel());
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    _model = createModel(context, () => SubscriptionSelectModel());
   }
 
   @override
@@ -60,16 +59,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: Slider(
-            activeColor: FlutterFlowTheme.of(context).primary,
-            inactiveColor: FlutterFlowTheme.of(context).alternate,
-            min: 0.0,
-            max: 10.0,
-            value: _model.sliderValue ??= 5.0,
-            onChanged: (newValue) {
-              newValue = double.parse(newValue.toStringAsFixed(2));
-              setState(() => _model.sliderValue = newValue);
-            },
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Text(
+                'Hello World',
+                style: FlutterFlowTheme.of(context).bodyMedium,
+              ),
+            ],
           ),
         ),
       ),
