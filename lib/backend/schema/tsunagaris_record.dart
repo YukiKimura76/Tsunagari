@@ -3,39 +3,60 @@ import 'dart:async';
 import 'package:collection/collection.dart';
 
 import '/backend/schema/util/firestore_util.dart';
-import '/backend/schema/util/schema_util.dart';
-import '/backend/schema/enums/enums.dart';
 
 import 'index.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 
 class TsunagarisRecord extends FirestoreRecord {
   TsunagarisRecord._(
-    DocumentReference reference,
-    Map<String, dynamic> data,
-  ) : super(reference, data) {
+    super.reference,
+    super.data,
+  ) {
     _initializeFields();
   }
 
-  // "familyName" field.
-  String? _familyName;
-  String get familyName => _familyName ?? '';
-  bool hasFamilyName() => _familyName != null;
+  // "name" field.
+  String? _name;
+  String get name => _name ?? '';
+  bool hasName() => _name != null;
 
-  // "firstName" field.
-  String? _firstName;
-  String get firstName => _firstName ?? '';
-  bool hasFirstName() => _firstName != null;
+  // "name_kana" field.
+  String? _nameKana;
+  String get nameKana => _nameKana ?? '';
+  bool hasNameKana() => _nameKana != null;
 
-  // "birthdate" field.
-  DateTime? _birthdate;
-  DateTime? get birthdate => _birthdate;
-  bool hasBirthdate() => _birthdate != null;
+  // "nick_name" field.
+  String? _nickName;
+  String get nickName => _nickName ?? '';
+  bool hasNickName() => _nickName != null;
+
+  // "relation" field.
+  String? _relation;
+  String get relation => _relation ?? '';
+  bool hasRelation() => _relation != null;
+
+  // "death_anniversary" field.
+  DateTime? _deathAnniversary;
+  DateTime? get deathAnniversary => _deathAnniversary;
+  bool hasDeathAnniversary() => _deathAnniversary != null;
+
+  // "birth_date" field.
+  DateTime? _birthDate;
+  DateTime? get birthDate => _birthDate;
+  bool hasBirthDate() => _birthDate != null;
+
+  // "created_at" field.
+  DateTime? _createdAt;
+  DateTime? get createdAt => _createdAt;
+  bool hasCreatedAt() => _createdAt != null;
 
   void _initializeFields() {
-    _familyName = snapshotData['familyName'] as String?;
-    _firstName = snapshotData['firstName'] as String?;
-    _birthdate = snapshotData['birthdate'] as DateTime?;
+    _name = snapshotData['name'] as String?;
+    _nameKana = snapshotData['name_kana'] as String?;
+    _nickName = snapshotData['nick_name'] as String?;
+    _relation = snapshotData['relation'] as String?;
+    _deathAnniversary = snapshotData['death_anniversary'] as DateTime?;
+    _birthDate = snapshotData['birth_date'] as DateTime?;
+    _createdAt = snapshotData['created_at'] as DateTime?;
   }
 
   static CollectionReference get collection =>
@@ -73,15 +94,23 @@ class TsunagarisRecord extends FirestoreRecord {
 }
 
 Map<String, dynamic> createTsunagarisRecordData({
-  String? familyName,
-  String? firstName,
-  DateTime? birthdate,
+  String? name,
+  String? nameKana,
+  String? nickName,
+  String? relation,
+  DateTime? deathAnniversary,
+  DateTime? birthDate,
+  DateTime? createdAt,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
-      'familyName': familyName,
-      'firstName': firstName,
-      'birthdate': birthdate,
+      'name': name,
+      'name_kana': nameKana,
+      'nick_name': nickName,
+      'relation': relation,
+      'death_anniversary': deathAnniversary,
+      'birth_date': birthDate,
+      'created_at': createdAt,
     }.withoutNulls,
   );
 
@@ -93,14 +122,25 @@ class TsunagarisRecordDocumentEquality implements Equality<TsunagarisRecord> {
 
   @override
   bool equals(TsunagarisRecord? e1, TsunagarisRecord? e2) {
-    return e1?.familyName == e2?.familyName &&
-        e1?.firstName == e2?.firstName &&
-        e1?.birthdate == e2?.birthdate;
+    return e1?.name == e2?.name &&
+        e1?.nameKana == e2?.nameKana &&
+        e1?.nickName == e2?.nickName &&
+        e1?.relation == e2?.relation &&
+        e1?.deathAnniversary == e2?.deathAnniversary &&
+        e1?.birthDate == e2?.birthDate &&
+        e1?.createdAt == e2?.createdAt;
   }
 
   @override
-  int hash(TsunagarisRecord? e) =>
-      const ListEquality().hash([e?.familyName, e?.firstName, e?.birthdate]);
+  int hash(TsunagarisRecord? e) => const ListEquality().hash([
+        e?.name,
+        e?.nameKana,
+        e?.nickName,
+        e?.relation,
+        e?.deathAnniversary,
+        e?.birthDate,
+        e?.createdAt
+      ]);
 
   @override
   bool isValidKey(Object? o) => o is TsunagarisRecord;

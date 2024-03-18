@@ -1,22 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
-import '/backend/schema/enums/enums.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
-import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -81,37 +72,97 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
+          appStateNotifier.loggedIn ? const WelcomePageWidget() : const LoginPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? const WelcomePageWidget()
+              : const LoginPageWidget(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'HomePage')
-              : HomePageWidget(),
+          requireAuth: true,
+          builder: (context, params) => const HomePageWidget(),
         ),
         FFRoute(
           name: 'login',
           path: '/login',
-          builder: (context, params) => LoginWidget(),
+          builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
           name: 'TsunagariList',
           path: '/tsunagariList',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'TsunagariList')
-              : TsunagariListWidget(),
+          requireAuth: true,
+          builder: (context, params) => const TsunagariListWidget(),
         ),
         FFRoute(
           name: 'SubscriptionSelect',
           path: '/subscriptionSelect',
-          builder: (context, params) => SubscriptionSelectWidget(),
+          requireAuth: true,
+          builder: (context, params) => const SubscriptionSelectWidget(),
+        ),
+        FFRoute(
+          name: 'TsunagariEdit',
+          path: '/tsunagariEdit',
+          requireAuth: true,
+          builder: (context, params) => TsunagariEditWidget(
+            tsunagariId: params.getParam('tsunagariId', ParamType.int),
+          ),
+        ),
+        FFRoute(
+          name: 'SignupPage',
+          path: '/signupPage',
+          builder: (context, params) => const SignupPageWidget(),
+        ),
+        FFRoute(
+          name: 'CreateUserInfoPage',
+          path: '/createUserInfoPage',
+          requireAuth: true,
+          builder: (context, params) => const CreateUserInfoPageWidget(),
+        ),
+        FFRoute(
+          name: 'LoginPage',
+          path: '/loginPage',
+          builder: (context, params) => const LoginPageWidget(),
+        ),
+        FFRoute(
+          name: 'WelcomePage',
+          path: '/welcomePage',
+          requireAuth: true,
+          builder: (context, params) => const WelcomePageWidget(),
+        ),
+        FFRoute(
+          name: 'TsunagariCreate',
+          path: '/tsunagariCreate',
+          requireAuth: true,
+          builder: (context, params) => const TsunagariCreateWidget(),
+        ),
+        FFRoute(
+          name: 'GraveListPage',
+          path: '/graveListPage',
+          requireAuth: true,
+          builder: (context, params) => const GraveListPageWidget(),
+        ),
+        FFRoute(
+          name: 'GraveLinkPage',
+          path: '/graveLinkPage',
+          requireAuth: true,
+          builder: (context, params) => const GraveLinkPageWidget(),
+        ),
+        FFRoute(
+          name: 'GrageCreate',
+          path: '/grageCreate',
+          requireAuth: true,
+          builder: (context, params) => const GrageCreateWidget(),
+        ),
+        FFRoute(
+          name: 'ChoicePlan',
+          path: '/choicePlan',
+          requireAuth: true,
+          builder: (context, params) => const ChoicePlanWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -278,7 +329,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/login';
+            return '/loginPage';
           }
           return null;
         },
@@ -345,7 +396,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {
