@@ -16,6 +16,21 @@ enum Relationship {
   Pet,
 }
 
+enum Plan {
+  plan1,
+  plan2,
+  plan3,
+}
+
+enum ExecuteStatus {
+  preSearchingExecutor,
+  searchingExecutor,
+  matched,
+  preExecution,
+  executed,
+  cancelled,
+}
+
 extension FFEnumExtensions<T extends Enum> on T {
   String serialize() => name;
 }
@@ -29,6 +44,10 @@ T? deserializeEnum<T>(String? value) {
   switch (T) {
     case (Relationship):
       return Relationship.values.deserialize(value) as T?;
+    case (Plan):
+      return Plan.values.deserialize(value) as T?;
+    case (ExecuteStatus):
+      return ExecuteStatus.values.deserialize(value) as T?;
     default:
       return null;
   }

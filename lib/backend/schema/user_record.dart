@@ -74,6 +74,11 @@ class UserRecord extends FirestoreRecord {
   List<DocumentReference> get tsunagaris => _tsunagaris ?? const [];
   bool hasTsunagaris() => _tsunagaris != null;
 
+  // "graves" field.
+  List<DocumentReference>? _graves;
+  List<DocumentReference> get graves => _graves ?? const [];
+  bool hasGraves() => _graves != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -87,6 +92,7 @@ class UserRecord extends FirestoreRecord {
     _postCode = snapshotData['post_code'] as String?;
     _address = snapshotData['address'] as String?;
     _tsunagaris = getDataList(snapshotData['tsunagaris']);
+    _graves = getDataList(snapshotData['graves']);
   }
 
   static CollectionReference get collection =>
@@ -171,7 +177,8 @@ class UserRecordDocumentEquality implements Equality<UserRecord> {
         e1?.nameKana == e2?.nameKana &&
         e1?.postCode == e2?.postCode &&
         e1?.address == e2?.address &&
-        listEquality.equals(e1?.tsunagaris, e2?.tsunagaris);
+        listEquality.equals(e1?.tsunagaris, e2?.tsunagaris) &&
+        listEquality.equals(e1?.graves, e2?.graves);
   }
 
   @override
@@ -187,7 +194,8 @@ class UserRecordDocumentEquality implements Equality<UserRecord> {
         e?.nameKana,
         e?.postCode,
         e?.address,
-        e?.tsunagaris
+        e?.tsunagaris,
+        e?.graves
       ]);
 
   @override

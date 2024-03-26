@@ -1,3 +1,22 @@
 {
-  "indexes": []
+  "indexes": [
+    {
+      "collectionGroup": "Purchases",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "target_tsunagari",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "service_status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "target_month",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ]
 }

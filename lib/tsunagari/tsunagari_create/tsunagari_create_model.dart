@@ -1,4 +1,3 @@
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'tsunagari_create_widget.dart' show TsunagariCreateWidget;
@@ -15,11 +14,11 @@ class TsunagariCreateModel extends FlutterFlowModel<TsunagariCreateWidget> {
 
   final unfocusNode = FocusNode();
   final formKey = GlobalKey<FormState>();
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
-  String? _textController1Validator(BuildContext context, String? val) {
+  // State field(s) for familyName widget.
+  FocusNode? familyNameFocusNode;
+  TextEditingController? familyNameController;
+  String? Function(BuildContext, String?)? familyNameControllerValidator;
+  String? _familyNameControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return '必須入力です。';
     }
@@ -27,11 +26,12 @@ class TsunagariCreateModel extends FlutterFlowModel<TsunagariCreateWidget> {
     return null;
   }
 
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
-  String? _textController2Validator(BuildContext context, String? val) {
+  // State field(s) for familyNameKana widget.
+  FocusNode? familyNameKanaFocusNode;
+  TextEditingController? familyNameKanaController;
+  String? Function(BuildContext, String?)? familyNameKanaControllerValidator;
+  String? _familyNameKanaControllerValidator(
+      BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return '必須入力です。';
     }
@@ -39,11 +39,11 @@ class TsunagariCreateModel extends FlutterFlowModel<TsunagariCreateWidget> {
     return null;
   }
 
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode3;
-  TextEditingController? textController3;
-  String? Function(BuildContext, String?)? textController3Validator;
-  String? _textController3Validator(BuildContext context, String? val) {
+  // State field(s) for givenName widget.
+  FocusNode? givenNameFocusNode;
+  TextEditingController? givenNameController;
+  String? Function(BuildContext, String?)? givenNameControllerValidator;
+  String? _givenNameControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return '必須入力です。';
     }
@@ -51,11 +51,11 @@ class TsunagariCreateModel extends FlutterFlowModel<TsunagariCreateWidget> {
     return null;
   }
 
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode4;
-  TextEditingController? textController4;
-  String? Function(BuildContext, String?)? textController4Validator;
-  String? _textController4Validator(BuildContext context, String? val) {
+  // State field(s) for givenNameKana widget.
+  FocusNode? givenNameKanaFocusNode;
+  TextEditingController? givenNameKanaController;
+  String? Function(BuildContext, String?)? givenNameKanaControllerValidator;
+  String? _givenNameKanaControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return '必須入力です。';
     }
@@ -63,100 +63,105 @@ class TsunagariCreateModel extends FlutterFlowModel<TsunagariCreateWidget> {
     return null;
   }
 
+  // State field(s) for relations widget.
+  String? relationsValue;
+  FormFieldController<String>? relationsValueController;
+  // State field(s) for nickName widget.
+  FocusNode? nickNameFocusNode;
+  TextEditingController? nickNameController;
+  String? Function(BuildContext, String?)? nickNameControllerValidator;
+  String? _nickNameControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return '必須入力です。';
+    }
+
+    return null;
+  }
+
+  // State field(s) for origin widget.
+  FormFieldController<List<String>>? originValueController;
+  String? get originValue => originValueController?.value?.firstOrNull;
+  set originValue(String? val) =>
+      originValueController?.value = val != null ? [val] : [];
   // State field(s) for DropDown widget.
   String? dropDownValue1;
   FormFieldController<String>? dropDownValueController1;
+  // State field(s) for deathAnniversaryYear widget.
+  FocusNode? deathAnniversaryYearFocusNode;
+  TextEditingController? deathAnniversaryYearController;
+  String? Function(BuildContext, String?)?
+      deathAnniversaryYearControllerValidator;
+  // State field(s) for deathAnniversaryMonth widget.
+  FocusNode? deathAnniversaryMonthFocusNode;
+  TextEditingController? deathAnniversaryMonthController;
+  String? Function(BuildContext, String?)?
+      deathAnniversaryMonthControllerValidator;
   // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode5;
-  TextEditingController? textController5;
-  String? Function(BuildContext, String?)? textController5Validator;
-  String? _textController5Validator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return '必須入力です。';
-    }
-
-    return null;
-  }
-
-  // State field(s) for DropDown widget.
-  String? dropDownValue2;
-  FormFieldController<String>? dropDownValueController2;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode6;
-  TextEditingController? textController6;
-  String? Function(BuildContext, String?)? textController6Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode7;
-  TextEditingController? textController7;
-  String? Function(BuildContext, String?)? textController7Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode8;
+  FocusNode? textFieldFocusNode;
   TextEditingController? textController8;
   String? Function(BuildContext, String?)? textController8Validator;
   // State field(s) for DropDown widget.
-  String? dropDownValue3;
-  FormFieldController<String>? dropDownValueController3;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode9;
-  TextEditingController? textController9;
-  String? Function(BuildContext, String?)? textController9Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode10;
-  TextEditingController? textController10;
-  String? Function(BuildContext, String?)? textController10Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode11;
-  TextEditingController? textController11;
-  String? Function(BuildContext, String?)? textController11Validator;
-  // Stores action output result for [Backend Call - Create Document] action in Button widget.
-  TsunagarisRecord? tsunagari;
+  String? dropDownValue2;
+  FormFieldController<String>? dropDownValueController2;
+  // State field(s) for birthDateYear widget.
+  FocusNode? birthDateYearFocusNode;
+  TextEditingController? birthDateYearController;
+  String? Function(BuildContext, String?)? birthDateYearControllerValidator;
+  // State field(s) for birthDateMonth widget.
+  FocusNode? birthDateMonthFocusNode;
+  TextEditingController? birthDateMonthController;
+  String? Function(BuildContext, String?)? birthDateMonthControllerValidator;
+  // State field(s) for birthDateDate widget.
+  FocusNode? birthDateDateFocusNode;
+  TextEditingController? birthDateDateController;
+  String? Function(BuildContext, String?)? birthDateDateControllerValidator;
 
   /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
-    textController1Validator = _textController1Validator;
-    textController2Validator = _textController2Validator;
-    textController3Validator = _textController3Validator;
-    textController4Validator = _textController4Validator;
-    textController5Validator = _textController5Validator;
+    familyNameControllerValidator = _familyNameControllerValidator;
+    familyNameKanaControllerValidator = _familyNameKanaControllerValidator;
+    givenNameControllerValidator = _givenNameControllerValidator;
+    givenNameKanaControllerValidator = _givenNameKanaControllerValidator;
+    nickNameControllerValidator = _nickNameControllerValidator;
   }
 
   @override
   void dispose() {
     unfocusNode.dispose();
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    familyNameFocusNode?.dispose();
+    familyNameController?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    familyNameKanaFocusNode?.dispose();
+    familyNameKanaController?.dispose();
 
-    textFieldFocusNode3?.dispose();
-    textController3?.dispose();
+    givenNameFocusNode?.dispose();
+    givenNameController?.dispose();
 
-    textFieldFocusNode4?.dispose();
-    textController4?.dispose();
+    givenNameKanaFocusNode?.dispose();
+    givenNameKanaController?.dispose();
 
-    textFieldFocusNode5?.dispose();
-    textController5?.dispose();
+    nickNameFocusNode?.dispose();
+    nickNameController?.dispose();
 
-    textFieldFocusNode6?.dispose();
-    textController6?.dispose();
+    deathAnniversaryYearFocusNode?.dispose();
+    deathAnniversaryYearController?.dispose();
 
-    textFieldFocusNode7?.dispose();
-    textController7?.dispose();
+    deathAnniversaryMonthFocusNode?.dispose();
+    deathAnniversaryMonthController?.dispose();
 
-    textFieldFocusNode8?.dispose();
+    textFieldFocusNode?.dispose();
     textController8?.dispose();
 
-    textFieldFocusNode9?.dispose();
-    textController9?.dispose();
+    birthDateYearFocusNode?.dispose();
+    birthDateYearController?.dispose();
 
-    textFieldFocusNode10?.dispose();
-    textController10?.dispose();
+    birthDateMonthFocusNode?.dispose();
+    birthDateMonthController?.dispose();
 
-    textFieldFocusNode11?.dispose();
-    textController11?.dispose();
+    birthDateDateFocusNode?.dispose();
+    birthDateDateController?.dispose();
   }
 
   /// Action blocks are added here.
