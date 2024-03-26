@@ -71,9 +71,7 @@ class FirebaseAuthManager extends AuthManager
       if (e.code == 'requires-recent-login') {
         ScaffoldMessenger.of(context).hideCurrentSnackBar();
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-              content: Text(
-                  'Too long since most recent sign in. Sign in again before deleting your account.')),
+          const SnackBar(content: Text('アカウントの削除を続行する前に、再度サインインが必要となります。')),
         );
       }
     }
@@ -95,9 +93,7 @@ class FirebaseAuthManager extends AuthManager
       if (e.code == 'requires-recent-login') {
         ScaffoldMessenger.of(context).hideCurrentSnackBar();
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-              content: Text(
-                  'Too long since most recent sign in. Sign in again before updating your email.')),
+          const SnackBar(content: Text('アカウントのメールアドレスを更新する前に、再度サインインが必要となります。')),
         );
       }
     }
@@ -110,15 +106,15 @@ class FirebaseAuthManager extends AuthManager
   }) async {
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException {
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error: ${e.message!}')),
+        const SnackBar(content: Text('エラーが発生しました。')),
       );
       return null;
     }
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Password reset email sent')),
+      const SnackBar(content: Text('パスワードリセットのメールを送信しました。')),
     );
   }
 
@@ -183,8 +179,8 @@ class FirebaseAuthManager extends AuthManager
             .update(() => phoneAuthManager.triggerOnCodeSent = false);
       } else if (phoneAuthManager.phoneAuthError != null) {
         final e = phoneAuthManager.phoneAuthError!;
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          content: Text('Error: ${e.message!}'),
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text('エラーが発生しました。'),
         ));
         phoneAuthManager.update(() => phoneAuthManager.phoneAuthError = null);
       }
@@ -290,11 +286,9 @@ class FirebaseAuthManager extends AuthManager
           : TsunagariFirebaseUser.fromUserCredential(userCredential);
     } on FirebaseAuthException catch (e) {
       final errorMsg = switch (e.code) {
-        'email-already-in-use' =>
-          'Error: The email is already in use by a different account',
-        'INVALID_LOGIN_CREDENTIALS' =>
-          'Error: The supplied auth credential is incorrect, malformed or has expired',
-        _ => 'Error: ${e.message!}',
+        'email-already-in-use' => 'このメールアドレスはすでに使われています。',
+        'INVALID_LOGIN_CREDENTIALS' => '認証に失敗しました。入力されたユーザー名またはパスワードを確認してください。',
+        _ => 'エラーが発生しました。',
       };
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(

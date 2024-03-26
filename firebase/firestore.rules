@@ -14,5 +14,26 @@ service cloud.firestore {
       allow write: if request.auth.uid == document;
       allow delete: if false;
     }
+
+    match /Graves/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Locations/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Purchases/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
   }
 }

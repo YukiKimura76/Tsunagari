@@ -44,109 +44,196 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
-          child: Container(
-            decoration: const BoxDecoration(),
-            child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
-                    child: Container(
-                      width: 342.0,
-                      height: 60.0,
-                      decoration: const BoxDecoration(),
+          child: Align(
+            alignment: const AlignmentDirectional(0.0, -1.0),
+            child: Container(
+              constraints: const BoxConstraints(
+                maxWidth: 500.0,
+              ),
+              decoration: const BoxDecoration(),
+              child: Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Align(
                       alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Text(
-                        'ツナガリへようこそ',
-                        style: FlutterFlowTheme.of(context).headlineMedium,
-                      ),
-                    ),
-                  ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(0.0),
-                    child: Image.network(
-                      'https://images.unsplash.com/photo-1568847811512-803314424fdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8cGljdHVyZXxlbnwwfHx8fDE3MTA0MDg3OTN8MA&ixlib=rb-4.0.3&q=80&w=1080',
-                      width: 342.0,
-                      height: 343.0,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  Align(
-                    alignment: const AlignmentDirectional(-1.0, 0.0),
-                    child: Text(
-                      '登録が完了しました。\n早速供養をしたい人を追加しましょう！',
-                      style: FlutterFlowTheme.of(context).bodyMedium,
-                    ),
-                  ),
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      FFButtonWidget(
-                        onPressed: () async {
-                          context.pushNamed('TsunagariCreate');
-                        },
-                        text: '供養したい人を追加',
-                        options: FFButtonOptions(
-                          height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              24.0, 0.0, 24.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primary,
-                          textStyle:
-                              FlutterFlowTheme.of(context).bodyLarge.override(
-                                    fontFamily: 'Rounded Mgen plus 2cp',
-                                    fontWeight: FontWeight.w500,
-                                    useGoogleFonts: false,
-                                  ),
-                          elevation: 0.0,
-                          borderSide: const BorderSide(
-                            color: Colors.transparent,
-                            width: 0.0,
-                          ),
-                          borderRadius: BorderRadius.circular(1000.0),
+                      child: Container(
+                        width: 342.0,
+                        height: 60.0,
+                        decoration: const BoxDecoration(),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        child: Text(
+                          'ツナガリへようこそ',
+                          style: FlutterFlowTheme.of(context).headlineMedium,
                         ),
-                        showLoadingIndicator: false,
                       ),
-                      FFButtonWidget(
-                        onPressed: () async {
-                          GoRouter.of(context).prepareAuthEvent();
-                          await authManager.signOut();
-                          GoRouter.of(context).clearRedirectLocation();
-
-                          context.goNamedAuth('LoginPage', context.mounted);
-                        },
-                        text: '追加する',
-                        options: FFButtonOptions(
-                          height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              24.0, 0.0, 24.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                          textStyle: FlutterFlowTheme.of(context).bodyLarge,
-                          elevation: 0.0,
-                          borderSide: BorderSide(
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(0.0),
+                      child: Image.network(
+                        'https://images.unsplash.com/photo-1568847811512-803314424fdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8cGljdHVyZXxlbnwwfHx8fDE3MTA0MDg3OTN8MA&ixlib=rb-4.0.3&q=80&w=1080',
+                        width: 342.0,
+                        height: 343.0,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      child: Text(
+                        '登録が完了しました。\n早速供養をしたい人を追加しましょう！',
+                        style: FlutterFlowTheme.of(context).bodyMedium,
+                      ),
+                    ),
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        FFButtonWidget(
+                          onPressed: () async {
+                            context.pushNamed('TsunagariCreate');
+                          },
+                          text: '供養したい人を追加',
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).primary,
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyLarge.override(
+                                      fontFamily: 'Rounded Mgen plus 2cp',
+                                      fontWeight: FontWeight.w500,
+                                      useGoogleFonts: false,
+                                    ),
+                            elevation: 0.0,
+                            borderSide: const BorderSide(
+                              color: Colors.transparent,
+                              width: 0.0,
+                            ),
+                            borderRadius: BorderRadius.circular(1000.0),
+                          ),
+                          showLoadingIndicator: false,
+                        ),
+                        FFButtonWidget(
+                          onPressed: () {
+                            print('Button pressed ...');
+                          },
+                          text: '追加する',
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
-                            width: 0.0,
+                            textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              width: 0.0,
+                            ),
+                            borderRadius: BorderRadius.circular(1000.0),
                           ),
-                          borderRadius: BorderRadius.circular(1000.0),
+                          showLoadingIndicator: false,
                         ),
-                        showLoadingIndicator: false,
-                      ),
-                    ]
-                        .divide(const SizedBox(height: 8.0))
-                        .addToStart(const SizedBox(height: 24.0))
-                        .addToEnd(const SizedBox(height: 24.0)),
-                  ),
-                ]
-                    .divide(const SizedBox(height: 24.0))
-                    .addToStart(const SizedBox(height: 24.0))
-                    .addToEnd(const SizedBox(height: 24.0)),
+                        FFButtonWidget(
+                          onPressed: () async {
+                            context.pushNamed(
+                              'GraveList',
+                              queryParameters: {
+                                'targetTsunagariName': serializeParam(
+                                  'hoge',
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          },
+                          text: 'お墓一覧画面に遷移（テスト用）',
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              width: 0.0,
+                            ),
+                            borderRadius: BorderRadius.circular(1000.0),
+                          ),
+                          showLoadingIndicator: false,
+                        ),
+                        FFButtonWidget(
+                          onPressed: () async {
+                            context.pushNamed('TsunagariList');
+                          },
+                          text: 'ツナガリ一覧画面に遷移（テスト用）',
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              width: 0.0,
+                            ),
+                            borderRadius: BorderRadius.circular(1000.0),
+                          ),
+                          showLoadingIndicator: false,
+                        ),
+                        FFButtonWidget(
+                          onPressed: () async {
+                            GoRouter.of(context).prepareAuthEvent();
+                            await authManager.signOut();
+                            GoRouter.of(context).clearRedirectLocation();
+
+                            context.goNamedAuth('LoginPage', context.mounted);
+                          },
+                          text: 'ログアウト（テスト用）',
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
+                            textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                            elevation: 0.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              width: 0.0,
+                            ),
+                            borderRadius: BorderRadius.circular(1000.0),
+                          ),
+                          showLoadingIndicator: false,
+                        ),
+                      ]
+                          .divide(const SizedBox(height: 8.0))
+                          .addToStart(const SizedBox(height: 24.0))
+                          .addToEnd(const SizedBox(height: 24.0)),
+                    ),
+                  ]
+                      .divide(const SizedBox(height: 24.0))
+                      .addToStart(const SizedBox(height: 24.0))
+                      .addToEnd(const SizedBox(height: 24.0)),
+                ),
               ),
             ),
           ),

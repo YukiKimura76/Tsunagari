@@ -10,60 +10,83 @@ import '/flutter_flow/flutter_flow_util.dart';
 
 class TsunagarisStruct extends FFFirebaseStruct {
   TsunagarisStruct({
-    String? familyName,
-    String? firstName,
+    String? name,
+    String? nakeKana,
     String? nickName,
-    DateTime? remembranceDate,
-    String? dispOptionForRemembranceDate,
+    String? relation,
+    DateTime? deathAnniversary,
+    DateTime? birthDate,
+    DateTime? createdAt,
+    String? origin,
     FirestoreUtilData firestoreUtilData = const FirestoreUtilData(),
-  })  : _familyName = familyName,
-        _firstName = firstName,
+  })  : _name = name,
+        _nakeKana = nakeKana,
         _nickName = nickName,
-        _remembranceDate = remembranceDate,
-        _dispOptionForRemembranceDate = dispOptionForRemembranceDate,
+        _relation = relation,
+        _deathAnniversary = deathAnniversary,
+        _birthDate = birthDate,
+        _createdAt = createdAt,
+        _origin = origin,
         super(firestoreUtilData);
 
-  // "familyName" field.
-  String? _familyName;
-  String get familyName => _familyName ?? '';
-  set familyName(String? val) => _familyName = val;
-  bool hasFamilyName() => _familyName != null;
+  // "name" field.
+  String? _name;
+  String get name => _name ?? '';
+  set name(String? val) => _name = val;
+  bool hasName() => _name != null;
 
-  // "firstName" field.
-  String? _firstName;
-  String get firstName => _firstName ?? '';
-  set firstName(String? val) => _firstName = val;
-  bool hasFirstName() => _firstName != null;
+  // "nake_kana" field.
+  String? _nakeKana;
+  String get nakeKana => _nakeKana ?? '';
+  set nakeKana(String? val) => _nakeKana = val;
+  bool hasNakeKana() => _nakeKana != null;
 
-  // "nickName" field.
+  // "nick_name" field.
   String? _nickName;
   String get nickName => _nickName ?? '';
   set nickName(String? val) => _nickName = val;
   bool hasNickName() => _nickName != null;
 
-  // "remembranceDate" field.
-  DateTime? _remembranceDate;
-  DateTime? get remembranceDate => _remembranceDate;
-  set remembranceDate(DateTime? val) => _remembranceDate = val;
-  bool hasRemembranceDate() => _remembranceDate != null;
+  // "relation" field.
+  String? _relation;
+  String get relation => _relation ?? '';
+  set relation(String? val) => _relation = val;
+  bool hasRelation() => _relation != null;
 
-  // "dispOptionForRemembranceDate" field.
-  String? _dispOptionForRemembranceDate;
-  String get dispOptionForRemembranceDate =>
-      _dispOptionForRemembranceDate ?? '';
-  set dispOptionForRemembranceDate(String? val) =>
-      _dispOptionForRemembranceDate = val;
-  bool hasDispOptionForRemembranceDate() =>
-      _dispOptionForRemembranceDate != null;
+  // "death_anniversary" field.
+  DateTime? _deathAnniversary;
+  DateTime? get deathAnniversary => _deathAnniversary;
+  set deathAnniversary(DateTime? val) => _deathAnniversary = val;
+  bool hasDeathAnniversary() => _deathAnniversary != null;
+
+  // "birth_date" field.
+  DateTime? _birthDate;
+  DateTime? get birthDate => _birthDate;
+  set birthDate(DateTime? val) => _birthDate = val;
+  bool hasBirthDate() => _birthDate != null;
+
+  // "created_at" field.
+  DateTime? _createdAt;
+  DateTime? get createdAt => _createdAt;
+  set createdAt(DateTime? val) => _createdAt = val;
+  bool hasCreatedAt() => _createdAt != null;
+
+  // "origin" field.
+  String? _origin;
+  String get origin => _origin ?? '';
+  set origin(String? val) => _origin = val;
+  bool hasOrigin() => _origin != null;
 
   static TsunagarisStruct fromMap(Map<String, dynamic> data) =>
       TsunagarisStruct(
-        familyName: data['familyName'] as String?,
-        firstName: data['firstName'] as String?,
-        nickName: data['nickName'] as String?,
-        remembranceDate: data['remembranceDate'] as DateTime?,
-        dispOptionForRemembranceDate:
-            data['dispOptionForRemembranceDate'] as String?,
+        name: data['name'] as String?,
+        nakeKana: data['nake_kana'] as String?,
+        nickName: data['nick_name'] as String?,
+        relation: data['relation'] as String?,
+        deathAnniversary: data['death_anniversary'] as DateTime?,
+        birthDate: data['birth_date'] as DateTime?,
+        createdAt: data['created_at'] as DateTime?,
+        origin: data['origin'] as String?,
       );
 
   static TsunagarisStruct? maybeFromMap(dynamic data) => data is Map
@@ -71,61 +94,91 @@ class TsunagarisStruct extends FFFirebaseStruct {
       : null;
 
   Map<String, dynamic> toMap() => {
-        'familyName': _familyName,
-        'firstName': _firstName,
-        'nickName': _nickName,
-        'remembranceDate': _remembranceDate,
-        'dispOptionForRemembranceDate': _dispOptionForRemembranceDate,
+        'name': _name,
+        'nake_kana': _nakeKana,
+        'nick_name': _nickName,
+        'relation': _relation,
+        'death_anniversary': _deathAnniversary,
+        'birth_date': _birthDate,
+        'created_at': _createdAt,
+        'origin': _origin,
       }.withoutNulls;
 
   @override
   Map<String, dynamic> toSerializableMap() => {
-        'familyName': serializeParam(
-          _familyName,
+        'name': serializeParam(
+          _name,
           ParamType.String,
         ),
-        'firstName': serializeParam(
-          _firstName,
+        'nake_kana': serializeParam(
+          _nakeKana,
           ParamType.String,
         ),
-        'nickName': serializeParam(
+        'nick_name': serializeParam(
           _nickName,
           ParamType.String,
         ),
-        'remembranceDate': serializeParam(
-          _remembranceDate,
+        'relation': serializeParam(
+          _relation,
+          ParamType.String,
+        ),
+        'death_anniversary': serializeParam(
+          _deathAnniversary,
           ParamType.DateTime,
         ),
-        'dispOptionForRemembranceDate': serializeParam(
-          _dispOptionForRemembranceDate,
+        'birth_date': serializeParam(
+          _birthDate,
+          ParamType.DateTime,
+        ),
+        'created_at': serializeParam(
+          _createdAt,
+          ParamType.DateTime,
+        ),
+        'origin': serializeParam(
+          _origin,
           ParamType.String,
         ),
       }.withoutNulls;
 
   static TsunagarisStruct fromSerializableMap(Map<String, dynamic> data) =>
       TsunagarisStruct(
-        familyName: deserializeParam(
-          data['familyName'],
+        name: deserializeParam(
+          data['name'],
           ParamType.String,
           false,
         ),
-        firstName: deserializeParam(
-          data['firstName'],
+        nakeKana: deserializeParam(
+          data['nake_kana'],
           ParamType.String,
           false,
         ),
         nickName: deserializeParam(
-          data['nickName'],
+          data['nick_name'],
           ParamType.String,
           false,
         ),
-        remembranceDate: deserializeParam(
-          data['remembranceDate'],
+        relation: deserializeParam(
+          data['relation'],
+          ParamType.String,
+          false,
+        ),
+        deathAnniversary: deserializeParam(
+          data['death_anniversary'],
           ParamType.DateTime,
           false,
         ),
-        dispOptionForRemembranceDate: deserializeParam(
-          data['dispOptionForRemembranceDate'],
+        birthDate: deserializeParam(
+          data['birth_date'],
+          ParamType.DateTime,
+          false,
+        ),
+        createdAt: deserializeParam(
+          data['created_at'],
+          ParamType.DateTime,
+          false,
+        ),
+        origin: deserializeParam(
+          data['origin'],
           ParamType.String,
           false,
         ),
@@ -137,40 +190,52 @@ class TsunagarisStruct extends FFFirebaseStruct {
   @override
   bool operator ==(Object other) {
     return other is TsunagarisStruct &&
-        familyName == other.familyName &&
-        firstName == other.firstName &&
+        name == other.name &&
+        nakeKana == other.nakeKana &&
         nickName == other.nickName &&
-        remembranceDate == other.remembranceDate &&
-        dispOptionForRemembranceDate == other.dispOptionForRemembranceDate;
+        relation == other.relation &&
+        deathAnniversary == other.deathAnniversary &&
+        birthDate == other.birthDate &&
+        createdAt == other.createdAt &&
+        origin == other.origin;
   }
 
   @override
   int get hashCode => const ListEquality().hash([
-        familyName,
-        firstName,
+        name,
+        nakeKana,
         nickName,
-        remembranceDate,
-        dispOptionForRemembranceDate
+        relation,
+        deathAnniversary,
+        birthDate,
+        createdAt,
+        origin
       ]);
 }
 
 TsunagarisStruct createTsunagarisStruct({
-  String? familyName,
-  String? firstName,
+  String? name,
+  String? nakeKana,
   String? nickName,
-  DateTime? remembranceDate,
-  String? dispOptionForRemembranceDate,
+  String? relation,
+  DateTime? deathAnniversary,
+  DateTime? birthDate,
+  DateTime? createdAt,
+  String? origin,
   Map<String, dynamic> fieldValues = const {},
   bool clearUnsetFields = true,
   bool create = false,
   bool delete = false,
 }) =>
     TsunagarisStruct(
-      familyName: familyName,
-      firstName: firstName,
+      name: name,
+      nakeKana: nakeKana,
       nickName: nickName,
-      remembranceDate: remembranceDate,
-      dispOptionForRemembranceDate: dispOptionForRemembranceDate,
+      relation: relation,
+      deathAnniversary: deathAnniversary,
+      birthDate: birthDate,
+      createdAt: createdAt,
+      origin: origin,
       firestoreUtilData: FirestoreUtilData(
         clearUnsetFields: clearUnsetFields,
         create: create,

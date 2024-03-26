@@ -7,6 +7,9 @@ import 'schema/util/firestore_util.dart';
 
 import 'schema/tsunagaris_record.dart';
 import 'schema/user_record.dart';
+import 'schema/graves_record.dart';
+import 'schema/locations_record.dart';
+import 'schema/purchases_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart';
@@ -16,6 +19,9 @@ export 'schema/util/schema_util.dart';
 
 export 'schema/tsunagaris_record.dart';
 export 'schema/user_record.dart';
+export 'schema/graves_record.dart';
+export 'schema/locations_record.dart';
+export 'schema/purchases_record.dart';
 
 /// Functions to query TsunagarisRecords (as a Stream and as a Future).
 Future<int> queryTsunagarisRecordCount({
@@ -91,6 +97,117 @@ Future<List<UserRecord>> queryUserRecordOnce({
       singleRecord: singleRecord,
     );
 
+/// Functions to query GravesRecords (as a Stream and as a Future).
+Future<int> queryGravesRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      GravesRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<GravesRecord>> queryGravesRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      GravesRecord.collection,
+      GravesRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<GravesRecord>> queryGravesRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      GravesRecord.collection,
+      GravesRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query LocationsRecords (as a Stream and as a Future).
+Future<int> queryLocationsRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      LocationsRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<LocationsRecord>> queryLocationsRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      LocationsRecord.collection,
+      LocationsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<LocationsRecord>> queryLocationsRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      LocationsRecord.collection,
+      LocationsRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query PurchasesRecords (as a Stream and as a Future).
+Future<int> queryPurchasesRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      PurchasesRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<PurchasesRecord>> queryPurchasesRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      PurchasesRecord.collection,
+      PurchasesRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<PurchasesRecord>> queryPurchasesRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      PurchasesRecord.collection,
+      PurchasesRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
 Future<int> queryCollectionCount(
   Query collection, {
   Query Function(Query)? queryBuilder,
@@ -155,6 +272,21 @@ Future<List<T>> queryCollectionOnce<T>(
       .where((d) => d != null)
       .map((d) => d!)
       .toList());
+}
+
+extension FilterExtension on Filter {
+  Filter filterIn(String field, List? list) => (list?.isEmpty ?? true)
+      ? Filter(field, whereIn: null)
+      : Filter(field, whereIn: list);
+
+  Filter filterNotIn(String field, List? list) => (list?.isEmpty ?? true)
+      ? Filter(field, whereNotIn: null)
+      : Filter(field, whereNotIn: list);
+
+  Filter filterArrayContainsAny(String field, List? list) =>
+      (list?.isEmpty ?? true)
+          ? Filter(field, arrayContainsAny: null)
+          : Filter(field, arrayContainsAny: list);
 }
 
 extension QueryExtension on Query {

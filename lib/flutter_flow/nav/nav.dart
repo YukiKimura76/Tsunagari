@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 
 import '/auth/base_auth_user_provider.dart';
@@ -82,37 +83,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const LoginPageWidget(),
         ),
         FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
-          requireAuth: true,
-          builder: (context, params) => const HomePageWidget(),
-        ),
-        FFRoute(
-          name: 'login',
-          path: '/login',
-          builder: (context, params) => const LoginWidget(),
-        ),
-        FFRoute(
-          name: 'TsunagariList',
-          path: '/tsunagariList',
-          requireAuth: true,
-          builder: (context, params) => const TsunagariListWidget(),
-        ),
-        FFRoute(
-          name: 'SubscriptionSelect',
-          path: '/subscriptionSelect',
-          requireAuth: true,
-          builder: (context, params) => const SubscriptionSelectWidget(),
-        ),
-        FFRoute(
-          name: 'TsunagariEdit',
-          path: '/tsunagariEdit',
-          requireAuth: true,
-          builder: (context, params) => TsunagariEditWidget(
-            tsunagariId: params.getParam('tsunagariId', ParamType.int),
-          ),
-        ),
-        FFRoute(
           name: 'SignupPage',
           path: '/signupPage',
           builder: (context, params) => const SignupPageWidget(),
@@ -141,28 +111,78 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const TsunagariCreateWidget(),
         ),
         FFRoute(
-          name: 'GraveListPage',
-          path: '/graveListPage',
+          name: 'GraveList',
+          path: '/graveList',
           requireAuth: true,
-          builder: (context, params) => const GraveListPageWidget(),
+          builder: (context, params) => GraveListWidget(
+            targetTsunagariName:
+                params.getParam('targetTsunagariName', ParamType.String),
+          ),
         ),
         FFRoute(
-          name: 'GraveLinkPage',
-          path: '/graveLinkPage',
+          name: 'GraveLocationCreate',
+          path: '/graveLocationCreate',
           requireAuth: true,
-          builder: (context, params) => const GraveLinkPageWidget(),
+          builder: (context, params) => GraveLocationCreateWidget(
+            graveRef: params.getParam(
+                'graveRef', ParamType.DocumentReference, false, ['Graves']),
+            tsunagariName: params.getParam('tsunagariName', ParamType.String),
+          ),
         ),
         FFRoute(
-          name: 'GrageCreate',
-          path: '/grageCreate',
+          name: 'GraveCreate',
+          path: '/graveCreate',
           requireAuth: true,
-          builder: (context, params) => const GrageCreateWidget(),
+          builder: (context, params) => GraveCreateWidget(
+            tsunagariName: params.getParam('tsunagariName', ParamType.String),
+          ),
         ),
         FFRoute(
           name: 'ChoicePlan',
           path: '/choicePlan',
           requireAuth: true,
-          builder: (context, params) => const ChoicePlanWidget(),
+          builder: (context, params) => ChoicePlanWidget(
+            graveRef: params.getParam(
+                'graveRef', ParamType.DocumentReference, false, ['Graves']),
+            locationRef: params.getParam('locationRef',
+                ParamType.DocumentReference, false, ['Locations']),
+          ),
+        ),
+        FFRoute(
+          name: 'GraveListPageSample',
+          path: '/graveListPageSample',
+          requireAuth: true,
+          builder: (context, params) => const GraveListPageSampleWidget(),
+        ),
+        FFRoute(
+          name: 'GraveCreateSample',
+          path: '/graveCreateSample',
+          requireAuth: true,
+          builder: (context, params) => const GraveCreateSampleWidget(),
+        ),
+        FFRoute(
+          name: 'TsunagariList',
+          path: '/tsunagariList',
+          requireAuth: true,
+          builder: (context, params) => const TsunagariListWidget(),
+        ),
+        FFRoute(
+          name: 'TsunagariEdit',
+          path: '/tsunagariEdit',
+          requireAuth: true,
+          builder: (context, params) => TsunagariEditWidget(
+            tsunagariDocRef: params.getParam('tsunagariDocRef',
+                ParamType.DocumentReference, false, ['Tsunagaris']),
+          ),
+        ),
+        FFRoute(
+          name: 'TsunagariDetail',
+          path: '/tsunagariDetail',
+          requireAuth: true,
+          builder: (context, params) => TsunagariDetailWidget(
+            tsunagariDocRef: params.getParam('tsunagariDocRef',
+                ParamType.DocumentReference, false, ['Tsunagaris']),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -345,12 +365,11 @@ class FFRoute {
           final child = appStateNotifier.loading
               ? Center(
                   child: SizedBox(
-                    width: 50.0,
-                    height: 50.0,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
-                      ),
+                    width: 18.0,
+                    height: 18.0,
+                    child: SpinKitCircle(
+                      color: FlutterFlowTheme.of(context).primary,
+                      size: 18.0,
                     ),
                   ),
                 )

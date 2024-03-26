@@ -1,12 +1,4 @@
 // Export pages
-export '/archive/home_page/home_page_widget.dart' show HomePageWidget;
-export '/archive/login/login_widget.dart' show LoginWidget;
-export '/archive/tsunagari_list/tsunagari_list_widget.dart'
-    show TsunagariListWidget;
-export '/archive/subscription_select/subscription_select_widget.dart'
-    show SubscriptionSelectWidget;
-export '/archive/tsunagari_edit/tsunagari_edit_widget.dart'
-    show TsunagariEditWidget;
 export '/auth/signup_page/signup_page_widget.dart' show SignupPageWidget;
 export '/auth/create_user_info_page/create_user_info_page_widget.dart'
     show CreateUserInfoPageWidget;
@@ -14,9 +6,18 @@ export '/auth/login_page/login_page_widget.dart' show LoginPageWidget;
 export '/auth/welcome_page/welcome_page_widget.dart' show WelcomePageWidget;
 export '/tsunagari/tsunagari_create/tsunagari_create_widget.dart'
     show TsunagariCreateWidget;
-export '/grave/grave_list_page/grave_list_page_widget.dart'
-    show GraveListPageWidget;
-export '/grave/grave_link_page/grave_link_page_widget.dart'
-    show GraveLinkPageWidget;
-export '/grave/grage_create/grage_create_widget.dart' show GrageCreateWidget;
+export '/grave/grave_list/grave_list_widget.dart' show GraveListWidget;
+export '/grave/grave_location_create/grave_location_create_widget.dart'
+    show GraveLocationCreateWidget;
+export '/grave/grave_create/grave_create_widget.dart' show GraveCreateWidget;
 export '/plan/choice_plan/choice_plan_widget.dart' show ChoicePlanWidget;
+export '/sample_page/grave_list_page_sample/grave_list_page_sample_widget.dart'
+    show GraveListPageSampleWidget;
+export '/sample_page/grave_create_sample/grave_create_sample_widget.dart'
+    show GraveCreateSampleWidget;
+export '/tsunagari/tsunagari_list/tsunagari_list_widget.dart'
+    show TsunagariListWidget;
+export '/tsunagari/tsunagari_edit/tsunagari_edit_widget.dart'
+    show TsunagariEditWidget;
+export '/tsunagari/tsunagari_detail/tsunagari_detail_widget.dart'
+    show TsunagariDetailWidget;
