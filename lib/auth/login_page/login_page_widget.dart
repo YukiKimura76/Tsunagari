@@ -79,8 +79,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'ログイン',
-                                style:
-                                    FlutterFlowTheme.of(context).headlineMedium,
+                                style: FlutterFlowTheme.of(context)
+                                    .headlineMedium
+                                    .override(
+                                      fontFamily: 'Rounded Mgen plus 2cp',
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
                               ),
                             ),
                           ),
@@ -90,8 +95,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               children: [
                                 TextSpan(
                                   text: '初めてですか？ ',
-                                  style:
-                                      FlutterFlowTheme.of(context).labelMedium,
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .override(
+                                        fontFamily: 'Rounded Mgen plus 2cp',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
                                 ),
                                 TextSpan(
                                   text: '新規登録',
@@ -101,6 +111,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                         fontFamily: 'Rounded Mgen plus 2cp',
                                         color: FlutterFlowTheme.of(context)
                                             .tertiary,
+                                        letterSpacing: 0.0,
                                         decoration: TextDecoration.underline,
                                         useGoogleFonts: false,
                                       ),
@@ -111,7 +122,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     },
                                 )
                               ],
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Rounded Mgen plus 2cp',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
                             ),
                           ),
                           Container(
@@ -129,7 +146,12 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     child: Text(
                                       'メールアドレス *',
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Rounded Mgen plus 2cp',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -141,10 +163,16 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     const Duration(milliseconds: 100),
                                     () => setState(() {}),
                                   ),
+                                  autofocus: false,
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium,
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Rounded Mgen plus 2cp',
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
                                     hintText: 'hi@tsunagari.com',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -153,6 +181,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           color: FlutterFlowTheme.of(context)
                                               .accent2,
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -215,8 +244,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       .override(
                                         fontFamily: 'Rounded Mgen plus 2cp',
                                         fontSize: 16.0,
+                                        letterSpacing: 0.0,
                                         useGoogleFonts: false,
                                       ),
+                                  minLines: null,
                                   validator: _model.emailTextControllerValidator
                                       .asValidator(context),
                                 ),
@@ -238,7 +269,12 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     child: Text(
                                       'パスワード *',
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Rounded Mgen plus 2cp',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -250,10 +286,16 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     const Duration(milliseconds: 100),
                                     () => setState(() {}),
                                   ),
+                                  autofocus: false,
                                   obscureText: !_model.passwordVisibility,
                                   decoration: InputDecoration(
                                     labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium,
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Rounded Mgen plus 2cp',
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
                                     hintText: '8文字以上の英数字',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -262,6 +304,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           color: FlutterFlowTheme.of(context)
                                               .accent2,
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -322,8 +365,10 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       .override(
                                         fontFamily: 'Rounded Mgen plus 2cp',
                                         fontSize: 16.0,
+                                        letterSpacing: 0.0,
                                         useGoogleFonts: false,
                                       ),
+                                  minLines: null,
                                   validator: _model
                                       .passwordTextControllerValidator
                                       .asValidator(context),
@@ -378,6 +423,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   .bodyLarge
                                   .override(
                                     fontFamily: 'Rounded Mgen plus 2cp',
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: false,
                                   ),
@@ -415,6 +461,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                               .override(
                                 fontFamily: 'Rounded Mgen plus 2cp',
                                 color: FlutterFlowTheme.of(context).alternate,
+                                letterSpacing: 0.0,
                                 useGoogleFonts: false,
                               ),
                         ),
@@ -442,7 +489,12 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                        textStyle:
+                            FlutterFlowTheme.of(context).bodyLarge.override(
+                                  fontFamily: 'Rounded Mgen plus 2cp',
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
                         elevation: 0.0,
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).accent2,

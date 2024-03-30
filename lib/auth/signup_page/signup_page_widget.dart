@@ -86,6 +86,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                       fontFamily: 'Rounded Mgen plus 2cp',
                                       color:
                                           FlutterFlowTheme.of(context).accent1,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
                               ),
@@ -97,8 +98,13 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                               children: [
                                 TextSpan(
                                   text: '登録済みですか？ ',
-                                  style:
-                                      FlutterFlowTheme.of(context).labelMedium,
+                                  style: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .override(
+                                        fontFamily: 'Rounded Mgen plus 2cp',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
                                 ),
                                 TextSpan(
                                   text: 'ログイン',
@@ -108,6 +114,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                         fontFamily: 'Rounded Mgen plus 2cp',
                                         color: FlutterFlowTheme.of(context)
                                             .tertiary,
+                                        letterSpacing: 0.0,
                                         decoration: TextDecoration.underline,
                                         useGoogleFonts: false,
                                       ),
@@ -118,7 +125,13 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                     },
                                 )
                               ],
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Rounded Mgen plus 2cp',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
                             ),
                           ),
                           Container(
@@ -136,7 +149,12 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                     child: Text(
                                       'メールアドレス *',
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Rounded Mgen plus 2cp',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -148,10 +166,16 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                     const Duration(milliseconds: 100),
                                     () => setState(() {}),
                                   ),
+                                  autofocus: false,
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium,
+                                        .labelMedium
+                                        .override(
+                                          fontFamily: 'Rounded Mgen plus 2cp',
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
                                     hintText: 'hi@tsunagari.com',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -160,6 +184,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                           color: FlutterFlowTheme.of(context)
                                               .accent2,
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -222,8 +247,10 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                       .override(
                                         fontFamily: 'Rounded Mgen plus 2cp',
                                         fontSize: 16.0,
+                                        letterSpacing: 0.0,
                                         useGoogleFonts: false,
                                       ),
+                                  minLines: null,
                                   validator: _model.emailTextControllerValidator
                                       .asValidator(context),
                                 ),
@@ -241,8 +268,13 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                   decoration: const BoxDecoration(),
                                   child: Text(
                                     'パスワード *',
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Rounded Mgen plus 2cp',
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
                                   ),
                                 ),
                               ),
@@ -254,10 +286,16 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                   const Duration(milliseconds: 100),
                                   () => setState(() {}),
                                 ),
+                                autofocus: false,
                                 obscureText: !_model.passwordVisibility,
                                 decoration: InputDecoration(
-                                  labelStyle:
-                                      FlutterFlowTheme.of(context).labelMedium,
+                                  labelStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .override(
+                                        fontFamily: 'Rounded Mgen plus 2cp',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
                                   hintText: '8文字以上の英数字',
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -266,6 +304,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                         color: FlutterFlowTheme.of(context)
                                             .accent2,
                                         fontSize: 16.0,
+                                        letterSpacing: 0.0,
                                         useGoogleFonts: false,
                                       ),
                                   enabledBorder: OutlineInputBorder(
@@ -324,8 +363,10 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                     .override(
                                       fontFamily: 'Rounded Mgen plus 2cp',
                                       fontSize: 16.0,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
+                                minLines: null,
                                 validator: _model
                                     .passwordTextControllerValidator
                                     .asValidator(context),
@@ -381,6 +422,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                   .bodyLarge
                                   .override(
                                     fontFamily: 'Rounded Mgen plus 2cp',
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: false,
                                   ),
@@ -418,6 +460,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                               .override(
                                 fontFamily: 'Rounded Mgen plus 2cp',
                                 color: FlutterFlowTheme.of(context).alternate,
+                                letterSpacing: 0.0,
                                 useGoogleFonts: false,
                               ),
                         ),
@@ -445,7 +488,12 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primaryBackground,
-                        textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                        textStyle:
+                            FlutterFlowTheme.of(context).bodyLarge.override(
+                                  fontFamily: 'Rounded Mgen plus 2cp',
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts: false,
+                                ),
                         elevation: 0.0,
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).accent2,

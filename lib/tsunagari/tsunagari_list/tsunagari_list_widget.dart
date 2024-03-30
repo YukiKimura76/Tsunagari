@@ -80,6 +80,7 @@ class _TsunagariListWidgetState extends State<TsunagariListWidget> {
                                         .override(
                                           fontFamily: 'Rounded Mgen plus 2cp',
                                           fontSize: 18.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                   ),
@@ -182,86 +183,94 @@ class _TsunagariListWidgetState extends State<TsunagariListWidget> {
                                                             CrossAxisAlignment
                                                                 .start,
                                                         children: [
-                                                          StreamBuilder<
-                                                              GravesRecord>(
-                                                            stream: GravesRecord
-                                                                .getDocument(
-                                                                    tsunagariContentTsunagarisRecord
-                                                                        .graveRef!),
-                                                            builder: (context,
-                                                                snapshot) {
-                                                              // Customize what your widget looks like when it's loading.
-                                                              if (!snapshot
-                                                                  .hasData) {
-                                                                return Center(
-                                                                  child:
-                                                                      SizedBox(
-                                                                    width: 18.0,
-                                                                    height:
-                                                                        18.0,
-                                                                    child:
-                                                                        SpinKitCircle(
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .primary,
-                                                                      size:
+                                                          Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                tsunagariContentTsunagarisRecord
+                                                                    .nickName,
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Rounded Mgen plus 2cp',
+                                                                      fontSize:
                                                                           18.0,
+                                                                      letterSpacing:
+                                                                          0.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w500,
+                                                                      useGoogleFonts:
+                                                                          false,
+                                                                      lineHeight:
+                                                                          1.485,
                                                                     ),
-                                                                  ),
-                                                                );
-                                                              }
-                                                              final columnGravesRecord =
-                                                                  snapshot
-                                                                      .data!;
-                                                              return Column(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                crossAxisAlignment:
-                                                                    CrossAxisAlignment
-                                                                        .start,
-                                                                children: [
-                                                                  Text(
-                                                                    tsunagariContentTsunagarisRecord
-                                                                        .nickName,
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Rounded Mgen plus 2cp',
-                                                                          fontSize:
+                                                              ),
+                                                              if (tsunagariContentTsunagarisRecord
+                                                                      .graveRef !=
+                                                                  null)
+                                                                StreamBuilder<
+                                                                    GravesRecord>(
+                                                                  stream: GravesRecord
+                                                                      .getDocument(
+                                                                          tsunagariContentTsunagarisRecord
+                                                                              .graveRef!),
+                                                                  builder: (context,
+                                                                      snapshot) {
+                                                                    // Customize what your widget looks like when it's loading.
+                                                                    if (!snapshot
+                                                                        .hasData) {
+                                                                      return Center(
+                                                                        child:
+                                                                            SizedBox(
+                                                                          width:
                                                                               18.0,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                          useGoogleFonts:
-                                                                              false,
-                                                                          lineHeight:
-                                                                              1.485,
+                                                                          height:
+                                                                              18.0,
+                                                                          child:
+                                                                              SpinKitCircle(
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primary,
+                                                                            size:
+                                                                                18.0,
+                                                                          ),
                                                                         ),
-                                                                  ),
-                                                                  Text(
-                                                                    columnGravesRecord
-                                                                        .name,
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Rounded Mgen plus 2cp',
-                                                                          fontSize:
-                                                                              14.0,
-                                                                          fontWeight:
-                                                                              FontWeight.normal,
-                                                                          useGoogleFonts:
-                                                                              false,
-                                                                          lineHeight:
-                                                                              1.485,
-                                                                        ),
-                                                                  ),
-                                                                ],
-                                                              );
-                                                            },
+                                                                      );
+                                                                    }
+                                                                    final textGravesRecord =
+                                                                        snapshot
+                                                                            .data!;
+                                                                    return Text(
+                                                                      textGravesRecord
+                                                                          .name,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Rounded Mgen plus 2cp',
+                                                                            fontSize:
+                                                                                14.0,
+                                                                            letterSpacing:
+                                                                                0.0,
+                                                                            fontWeight:
+                                                                                FontWeight.normal,
+                                                                            useGoogleFonts:
+                                                                                false,
+                                                                            lineHeight:
+                                                                                1.485,
+                                                                          ),
+                                                                    );
+                                                                  },
+                                                                ),
+                                                            ],
                                                           ),
                                                           Row(
                                                             mainAxisSize:
@@ -300,7 +309,7 @@ class _TsunagariListWidgetState extends State<TsunagariListWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Icon(
-                                                                            FFIcons.kflowerLow,
+                                                                            FFIcons.k16Flower2,
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).secondaryText,
                                                                             size:
@@ -315,6 +324,7 @@ class _TsunagariListWidgetState extends State<TsunagariListWidget> {
                                                                                   fontFamily: 'Rounded Mgen plus 2cp',
                                                                                   color: FlutterFlowTheme.of(context).secondaryText,
                                                                                   fontSize: 12.0,
+                                                                                  letterSpacing: 0.0,
                                                                                   useGoogleFonts: false,
                                                                                   lineHeight: 1.485,
                                                                                 ),
@@ -340,7 +350,7 @@ class _TsunagariListWidgetState extends State<TsunagariListWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Icon(
-                                                                            FFIcons.kclean,
+                                                                            FFIcons.k16Clean,
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).secondaryText,
                                                                             size:
@@ -355,6 +365,7 @@ class _TsunagariListWidgetState extends State<TsunagariListWidget> {
                                                                                   fontFamily: 'Rounded Mgen plus 2cp',
                                                                                   color: FlutterFlowTheme.of(context).secondaryText,
                                                                                   fontSize: 12.0,
+                                                                                  letterSpacing: 0.0,
                                                                                   useGoogleFonts: false,
                                                                                   lineHeight: 1.485,
                                                                                 ),
@@ -405,6 +416,8 @@ class _TsunagariListWidgetState extends State<TsunagariListWidget> {
                                                                           .secondaryText,
                                                                       fontSize:
                                                                           12.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       useGoogleFonts:
                                                                           false,
                                                                       lineHeight:
@@ -539,6 +552,8 @@ class _TsunagariListWidgetState extends State<TsunagariListWidget> {
                                                                                 FlutterFlowTheme.of(context).secondaryText,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             useGoogleFonts:
                                                                                 false,
                                                                             lineHeight:
@@ -587,6 +602,7 @@ class _TsunagariListWidgetState extends State<TsunagariListWidget> {
                                                                                           fontFamily: 'Rounded Mgen plus 2cp',
                                                                                           color: const Color(0xFFD57B00),
                                                                                           fontSize: 12.0,
+                                                                                          letterSpacing: 0.0,
                                                                                           useGoogleFonts: false,
                                                                                           lineHeight: 1.485,
                                                                                         ),
@@ -619,6 +635,7 @@ class _TsunagariListWidgetState extends State<TsunagariListWidget> {
                                                                                           fontFamily: 'Rounded Mgen plus 2cp',
                                                                                           color: FlutterFlowTheme.of(context).accent1,
                                                                                           fontSize: 12.0,
+                                                                                          letterSpacing: 0.0,
                                                                                           useGoogleFonts: false,
                                                                                           lineHeight: 1.485,
                                                                                         ),

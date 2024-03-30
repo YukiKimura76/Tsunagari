@@ -100,6 +100,7 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                   .override(
                                     fontFamily: 'Rounded Mgen plus 2cp',
                                     color: FlutterFlowTheme.of(context).accent1,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                             ),
@@ -126,7 +127,13 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           child: Text(
                                             '姓 *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -138,11 +145,18 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: '鈴木',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -154,6 +168,7 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -226,8 +241,10 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .textController1Validator
                                             .asValidator(context),
@@ -250,7 +267,13 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           child: Text(
                                             '姓(かな) *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -262,11 +285,18 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: 'すずき',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -278,6 +308,7 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -350,8 +381,10 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .textController2Validator
                                             .asValidator(context),
@@ -374,7 +407,13 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           child: Text(
                                             '名 *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -386,11 +425,18 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: '花子',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -402,6 +448,7 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -474,8 +521,10 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .textController3Validator
                                             .asValidator(context),
@@ -498,7 +547,13 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           child: Text(
                                             '名(かな) *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -510,11 +565,18 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: 'はなこ',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -526,6 +588,7 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -598,8 +661,10 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .textController4Validator
                                             .asValidator(context),
@@ -622,7 +687,13 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           child: Text(
                                             '郵便番号 *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -644,11 +715,18 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                                 const Duration(milliseconds: 2000),
                                                 () => setState(() {}),
                                               ),
+                                              autofocus: false,
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 labelStyle:
                                                     FlutterFlowTheme.of(context)
-                                                        .labelMedium,
+                                                        .labelMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                                 hintText: '7桁の番号',
                                                 hintStyle:
                                                     FlutterFlowTheme.of(context)
@@ -660,6 +738,7 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                 enabledBorder:
@@ -749,8 +828,10 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
+                                              minLines: null,
                                               validator: _model
                                                   .textController5Validator
                                                   .asValidator(context),
@@ -832,6 +913,7 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                                       .override(
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         useGoogleFonts: false,
@@ -866,7 +948,13 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           child: Text(
                                             '現住所都道府県 *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -878,11 +966,18 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: '都道府県を選択',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -894,6 +989,7 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -966,8 +1062,10 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .textController6Validator
                                             .asValidator(context),
@@ -990,7 +1088,13 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           child: Text(
                                             '市町村 *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -1002,11 +1106,18 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: 'ツナガリ村',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -1018,6 +1129,7 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -1090,8 +1202,10 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .textController7Validator
                                             .asValidator(context),
@@ -1146,6 +1260,7 @@ class _CreateUserInfoPageWidgetState extends State<CreateUserInfoPageWidget> {
                             textStyle:
                                 FlutterFlowTheme.of(context).bodyLarge.override(
                                       fontFamily: 'Rounded Mgen plus 2cp',
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: false,
                                     ),

@@ -108,43 +108,16 @@ class TsunagariEditModel extends FlutterFlowModel<TsunagariEditWidget> {
   TextEditingController? deathAnniversaryYearController;
   String? Function(BuildContext, String?)?
       deathAnniversaryYearControllerValidator;
-  String? _deathAnniversaryYearControllerValidator(
-      BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return '必須入力です。';
-    }
-
-    return null;
-  }
-
   // State field(s) for deathAnniversaryMonth widget.
   FocusNode? deathAnniversaryMonthFocusNode;
   TextEditingController? deathAnniversaryMonthController;
   String? Function(BuildContext, String?)?
       deathAnniversaryMonthControllerValidator;
-  String? _deathAnniversaryMonthControllerValidator(
-      BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return '必須入力です。';
-    }
-
-    return null;
-  }
-
   // State field(s) for deathAnniversaryDay widget.
   FocusNode? deathAnniversaryDayFocusNode;
   TextEditingController? deathAnniversaryDayController;
   String? Function(BuildContext, String?)?
       deathAnniversaryDayControllerValidator;
-  String? _deathAnniversaryDayControllerValidator(
-      BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return '必須入力です。';
-    }
-
-    return null;
-  }
-
   // State field(s) for warekiDropdown2 widget.
   String? warekiDropdown2Value;
   FormFieldController<String>? warekiDropdown2ValueController;
@@ -161,8 +134,6 @@ class TsunagariEditModel extends FlutterFlowModel<TsunagariEditWidget> {
   TextEditingController? birthDateDayController;
   String? Function(BuildContext, String?)? birthDateDayControllerValidator;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {
     familyNameControllerValidator = _familyNameControllerValidator;
@@ -170,12 +141,6 @@ class TsunagariEditModel extends FlutterFlowModel<TsunagariEditWidget> {
     givenNameControllerValidator = _givenNameControllerValidator;
     givenNameKanaControllerValidator = _givenNameKanaControllerValidator;
     nickNameControllerValidator = _nickNameControllerValidator;
-    deathAnniversaryYearControllerValidator =
-        _deathAnniversaryYearControllerValidator;
-    deathAnniversaryMonthControllerValidator =
-        _deathAnniversaryMonthControllerValidator;
-    deathAnniversaryDayControllerValidator =
-        _deathAnniversaryDayControllerValidator;
   }
 
   @override
@@ -214,8 +179,4 @@ class TsunagariEditModel extends FlutterFlowModel<TsunagariEditWidget> {
     birthDateDayFocusNode?.dispose();
     birthDateDayController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

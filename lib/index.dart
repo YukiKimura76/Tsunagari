@@ -11,10 +11,6 @@ export '/grave/grave_location_create/grave_location_create_widget.dart'
     show GraveLocationCreateWidget;
 export '/grave/grave_create/grave_create_widget.dart' show GraveCreateWidget;
 export '/plan/choice_plan/choice_plan_widget.dart' show ChoicePlanWidget;
-export '/sample_page/grave_list_page_sample/grave_list_page_sample_widget.dart'
-    show GraveListPageSampleWidget;
-export '/sample_page/grave_create_sample/grave_create_sample_widget.dart'
-    show GraveCreateSampleWidget;
 export '/tsunagari/tsunagari_list/tsunagari_list_widget.dart'
     show TsunagariListWidget;
 export '/tsunagari/tsunagari_edit/tsunagari_edit_widget.dart'

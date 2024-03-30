@@ -81,6 +81,7 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                   .override(
                                     fontFamily: 'Rounded Mgen plus 2cp',
                                     color: FlutterFlowTheme.of(context).accent1,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                             ),
@@ -101,13 +102,20 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                         fontFamily: 'Rounded Mgen plus 2cp',
                                         color: FlutterFlowTheme.of(context)
                                             .accent1,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: false,
                                       ),
                                 ),
                                 Text(
                                   '以下の表示は供養したい人１人あたりの金額です',
-                                  style: FlutterFlowTheme.of(context).bodySmall,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Rounded Mgen plus 2cp',
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
                                 ),
                               ].divide(const SizedBox(height: 2.0)),
                             ),
@@ -164,7 +172,7 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                         alignment:
                                             const AlignmentDirectional(-1.0, -1.0),
                                         child: Icon(
-                                          FFIcons.kflowerLow,
+                                          FFIcons.k24Flower1,
                                           color: FlutterFlowTheme.of(context)
                                               .alternate,
                                           size: 24.0,
@@ -185,6 +193,7 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .accent1,
+                                                  letterSpacing: 0.0,
                                                   useGoogleFonts: false,
                                                 ),
                                           ),
@@ -209,6 +218,7 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                                           fontFamily:
                                                               'Rounded Mgen plus 2cp',
                                                           fontSize: 32.0,
+                                                          letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                           useGoogleFonts: false,
@@ -239,7 +249,13 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                                 'シンプルな献花をご希望の方へ',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodySmall,
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                             ],
                                           ),
@@ -310,7 +326,7 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                               alignment: const AlignmentDirectional(
                                                   -1.0, -1.0),
                                               child: Icon(
-                                                FFIcons.kflowerMiddle,
+                                                FFIcons.k24Flower2,
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .alternate,
@@ -334,6 +350,7 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .accent1,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                                 ),
@@ -361,6 +378,8 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                                                 fontFamily:
                                                                     'Rounded Mgen plus 2cp',
                                                                 fontSize: 32.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold,
@@ -396,10 +415,16 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                                     ),
                                                     Text(
                                                       '少し華のある献花をご希望の方へ',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodySmall,
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodySmall
+                                                          .override(
+                                                            fontFamily:
+                                                                'Rounded Mgen plus 2cp',
+                                                            letterSpacing: 0.0,
+                                                            useGoogleFonts:
+                                                                false,
+                                                          ),
                                                     ),
                                                   ],
                                                 ),
@@ -441,6 +466,7 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                                                   .of(context)
                                                               .secondaryBackground,
                                                           fontSize: 12.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                               ),
@@ -506,7 +532,7 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                         alignment:
                                             const AlignmentDirectional(-1.0, -1.0),
                                         child: Icon(
-                                          FFIcons.kflowerHigh,
+                                          FFIcons.k24Flower3,
                                           color: FlutterFlowTheme.of(context)
                                               .alternate,
                                           size: 24.0,
@@ -527,6 +553,7 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .accent1,
+                                                  letterSpacing: 0.0,
                                                   useGoogleFonts: false,
                                                 ),
                                           ),
@@ -551,6 +578,7 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                                           fontFamily:
                                                               'Rounded Mgen plus 2cp',
                                                           fontSize: 32.0,
+                                                          letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                           useGoogleFonts: false,
@@ -581,7 +609,13 @@ class _ChoicePlanWidgetState extends State<ChoicePlanWidget> {
                                                 '豪華な献花をご希望の方へ',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodySmall,
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                             ],
                                           ),

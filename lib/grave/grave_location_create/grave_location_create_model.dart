@@ -19,8 +19,6 @@ class GraveLocationCreateModel
   // Stores action output result for [Backend Call - Create Document] action in Button widget.
   LocationsRecord? locationDoc;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -33,8 +31,4 @@ class GraveLocationCreateModel
     textFieldFocusNode2?.dispose();
     textController2?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

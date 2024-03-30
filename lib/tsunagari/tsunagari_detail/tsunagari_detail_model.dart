@@ -10,8 +10,6 @@ class TsunagariDetailModel extends FlutterFlowModel<TsunagariDetailWidget> {
   // Stores action output result for [Backend Call - Read Document] action in deleteTsunagari widget.
   LocationsRecord? locationDoc;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -19,8 +17,4 @@ class TsunagariDetailModel extends FlutterFlowModel<TsunagariDetailWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

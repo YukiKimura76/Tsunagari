@@ -90,6 +90,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
                             fontFamily: 'Rounded Mgen plus 2cp',
                             color: FlutterFlowTheme.of(context).accent1,
+                            letterSpacing: 0.0,
                             useGoogleFonts: false,
                           ),
                     ),
@@ -137,6 +138,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                                           color: FlutterFlowTheme.of(context)
                                               .alternate,
                                           fontSize: 18.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                           useGoogleFonts: false,
                                           lineHeight: 1.485,
@@ -157,6 +159,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                                             .override(
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                               lineHeight: 1.485,
                                             ),
@@ -168,6 +171,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                                             .override(
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                               lineHeight: 1.485,
                                             ),
@@ -193,6 +197,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                                       fontFamily: 'Rounded Mgen plus 2cp',
                                       color:
                                           FlutterFlowTheme.of(context).tertiary,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: false,
                                     ),
@@ -213,6 +218,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
                             fontFamily: 'Rounded Mgen plus 2cp',
                             color: FlutterFlowTheme.of(context).accent1,
+                            letterSpacing: 0.0,
                             useGoogleFonts: false,
                           ),
                     ),
@@ -299,6 +305,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                                                 : FlutterFlowTheme.of(context)
                                                     .accent3,
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -331,6 +338,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                                 .override(
                                   fontFamily: 'Rounded Mgen plus 2cp',
                                   color: FlutterFlowTheme.of(context).accent1,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                           ),
@@ -345,6 +353,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                                 .override(
                                   fontFamily: 'Rounded Mgen plus 2cp',
                                   fontSize: 12.0,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                           ),
@@ -436,6 +445,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                                                             context)
                                                         .accent3,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -471,6 +481,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
                             fontFamily: 'Rounded Mgen plus 2cp',
                             color: FlutterFlowTheme.of(context).accent1,
+                            letterSpacing: 0.0,
                             useGoogleFonts: false,
                           ),
                     ),
@@ -485,6 +496,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Rounded Mgen plus 2cp',
                             fontSize: 18.0,
+                            letterSpacing: 0.0,
                             fontWeight: FontWeight.w500,
                             useGoogleFonts: false,
                           ),
@@ -715,6 +727,7 @@ class _ChoicePlanComponentWidgetState extends State<ChoicePlanComponentWidget> {
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).bodyLarge.override(
                           fontFamily: 'Rounded Mgen plus 2cp',
+                          letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
                           useGoogleFonts: false,
                         ),

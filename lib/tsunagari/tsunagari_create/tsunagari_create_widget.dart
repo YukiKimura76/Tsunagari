@@ -1,4 +1,5 @@
-import '/backend/schema/structs/index.dart';
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -51,8 +52,8 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
     _model.deathAnniversaryMonthController ??= TextEditingController();
     _model.deathAnniversaryMonthFocusNode ??= FocusNode();
 
-    _model.textController8 ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.deathAnniversaryDateController ??= TextEditingController();
+    _model.deathAnniversaryDateFocusNode ??= FocusNode();
 
     _model.birthDateYearController ??= TextEditingController();
     _model.birthDateYearFocusNode ??= FocusNode();
@@ -114,6 +115,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                 .override(
                                   fontFamily: 'Rounded Mgen plus 2cp',
                                   color: FlutterFlowTheme.of(context).accent1,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                           ),
@@ -139,7 +141,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       child: Text(
                                         '姓 *',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -151,10 +159,16 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       const Duration(milliseconds: 100),
                                       () => setState(() {}),
                                     ),
+                                    autofocus: false,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Rounded Mgen plus 2cp',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                       hintText: '鈴木',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -163,6 +177,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .accent2,
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -229,8 +244,10 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                         .override(
                                           fontFamily: 'Rounded Mgen plus 2cp',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
+                                    minLines: null,
                                     validator: _model
                                         .familyNameControllerValidator
                                         .asValidator(context),
@@ -250,7 +267,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       child: Text(
                                         '姓(かな) *',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -262,10 +285,16 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       const Duration(milliseconds: 100),
                                       () => setState(() {}),
                                     ),
+                                    autofocus: false,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Rounded Mgen plus 2cp',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                       hintText: 'すずき',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -274,6 +303,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .accent2,
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -342,8 +372,10 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                         .override(
                                           fontFamily: 'Rounded Mgen plus 2cp',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
+                                    minLines: null,
                                     validator: _model
                                         .familyNameKanaControllerValidator
                                         .asValidator(context),
@@ -363,7 +395,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       child: Text(
                                         '名 *',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -375,10 +413,16 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       const Duration(milliseconds: 100),
                                       () => setState(() {}),
                                     ),
+                                    autofocus: false,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Rounded Mgen plus 2cp',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                       hintText: '花子',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -387,6 +431,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .accent2,
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -453,8 +498,10 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                         .override(
                                           fontFamily: 'Rounded Mgen plus 2cp',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
+                                    minLines: null,
                                     validator: _model
                                         .givenNameControllerValidator
                                         .asValidator(context),
@@ -474,7 +521,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       child: Text(
                                         '名(かな) *',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -486,10 +539,16 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       const Duration(milliseconds: 100),
                                       () => setState(() {}),
                                     ),
+                                    autofocus: false,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Rounded Mgen plus 2cp',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                       hintText: 'はなこ',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -498,6 +557,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .accent2,
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -566,8 +626,10 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                         .override(
                                           fontFamily: 'Rounded Mgen plus 2cp',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
+                                    minLines: null,
                                     validator: _model
                                         .givenNameKanaControllerValidator
                                         .asValidator(context),
@@ -587,7 +649,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       child: Text(
                                         '関係性 *',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -615,6 +683,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                         .override(
                                           fontFamily: 'Rounded Mgen plus 2cp',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     hintText: '関係性を選択',
@@ -652,7 +721,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       child: Text(
                                         '呼び名 *',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -664,10 +739,16 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       const Duration(milliseconds: 100),
                                       () => setState(() {}),
                                     ),
+                                    autofocus: false,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       labelStyle: FlutterFlowTheme.of(context)
-                                          .labelMedium,
+                                          .labelMedium
+                                          .override(
+                                            fontFamily: 'Rounded Mgen plus 2cp',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                       hintText: '例：おじいちゃん、ばぁば',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -676,6 +757,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .accent2,
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -742,8 +824,10 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                         .override(
                                           fontFamily: 'Rounded Mgen plus 2cp',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
+                                    minLines: null,
                                     validator: _model
                                         .nickNameControllerValidator
                                         .asValidator(context),
@@ -763,7 +847,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       child: Text(
                                         '父方・母方 *',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -797,6 +887,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .primaryText,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             iconColor:
@@ -819,6 +910,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                       fontFamily:
                                                           'Rounded Mgen plus 2cp',
                                                       color: const Color(0xFF37542D),
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             iconColor: const Color(0xFF37542D),
@@ -861,9 +953,15 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       height: 22.0,
                                       decoration: const BoxDecoration(),
                                       child: Text(
-                                        '命日 *',
+                                        '命日',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -909,6 +1007,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.normal,
                                                         useGoogleFonts: false,
@@ -959,7 +1058,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                             height: 40.0,
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyMedium,
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '和暦',
                                             icon: Icon(
                                               Icons.keyboard_arrow_down_rounded,
@@ -1018,7 +1123,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyMedium,
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Rounded Mgen plus 2cp',
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           Container(
                                             width: 44.0,
@@ -1036,6 +1147,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                 const Duration(milliseconds: 100),
                                                 () => setState(() {}),
                                               ),
+                                              autofocus: false,
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 isDense: true,
@@ -1055,6 +1167,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                 enabledBorder: InputBorder.none,
@@ -1070,8 +1183,10 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
+                                              minLines: null,
                                               keyboardType:
                                                   TextInputType.number,
                                               validator: _model
@@ -1086,7 +1201,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                           Text(
                                             '年',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                           Container(
                                             width: 28.0,
@@ -1104,6 +1225,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                 const Duration(milliseconds: 100),
                                                 () => setState(() {}),
                                               ),
+                                              autofocus: false,
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 isDense: true,
@@ -1118,6 +1240,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                 enabledBorder: InputBorder.none,
@@ -1133,9 +1256,11 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                               textAlign: TextAlign.end,
+                                              minLines: null,
                                               keyboardType:
                                                   TextInputType.number,
                                               validator: _model
@@ -1150,7 +1275,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                           Text(
                                             '月',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                           Container(
                                             width: 28.0,
@@ -1158,16 +1289,17 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                             alignment:
                                                 const AlignmentDirectional(0.0, 1.0),
                                             child: TextFormField(
-                                              controller:
-                                                  _model.textController8,
-                                              focusNode:
-                                                  _model.textFieldFocusNode,
+                                              controller: _model
+                                                  .deathAnniversaryDateController,
+                                              focusNode: _model
+                                                  .deathAnniversaryDateFocusNode,
                                               onChanged: (_) =>
                                                   EasyDebounce.debounce(
-                                                '_model.textController8',
+                                                '_model.deathAnniversaryDateController',
                                                 const Duration(milliseconds: 100),
                                                 () => setState(() {}),
                                               ),
+                                              autofocus: false,
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 isDense: true,
@@ -1182,6 +1314,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                 enabledBorder: InputBorder.none,
@@ -1197,13 +1330,15 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                               textAlign: TextAlign.end,
+                                              minLines: null,
                                               keyboardType:
                                                   TextInputType.number,
                                               validator: _model
-                                                  .textController8Validator
+                                                  .deathAnniversaryDateControllerValidator
                                                   .asValidator(context),
                                               inputFormatters: [
                                                 FilteringTextInputFormatter
@@ -1214,7 +1349,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                           Text(
                                             '日',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ].divide(const SizedBox(width: 4.0)),
                                       ),
@@ -1235,7 +1376,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                       child: Text(
                                         '生年月日',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  'Rounded Mgen plus 2cp',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -1281,6 +1428,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.normal,
                                                         useGoogleFonts: false,
@@ -1331,7 +1479,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                             height: 40.0,
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyMedium,
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '和暦',
                                             icon: Icon(
                                               Icons.keyboard_arrow_down_rounded,
@@ -1390,7 +1544,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyMedium,
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Rounded Mgen plus 2cp',
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           SizedBox(
                                             width: 46.0,
@@ -1405,6 +1565,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                 const Duration(milliseconds: 100),
                                                 () => setState(() {}),
                                               ),
+                                              autofocus: false,
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 isDense: true,
@@ -1424,6 +1585,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                 enabledBorder: InputBorder.none,
@@ -1439,8 +1601,10 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
+                                              minLines: null,
                                               maxLength: _model
                                                               .selectedWareki2 !=
                                                           null &&
@@ -1467,7 +1631,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                           Text(
                                             '年',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                           SizedBox(
                                             width: 22.0,
@@ -1482,6 +1652,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                 const Duration(milliseconds: 100),
                                                 () => setState(() {}),
                                               ),
+                                              autofocus: false,
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 isDense: true,
@@ -1496,6 +1667,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                 enabledBorder: InputBorder.none,
@@ -1511,9 +1683,11 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                               textAlign: TextAlign.end,
+                                              minLines: null,
                                               keyboardType:
                                                   TextInputType.number,
                                               validator: _model
@@ -1528,7 +1702,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                           Text(
                                             '月',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                           SizedBox(
                                             width: 22.0,
@@ -1543,6 +1723,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                 const Duration(milliseconds: 100),
                                                 () => setState(() {}),
                                               ),
+                                              autofocus: false,
                                               obscureText: false,
                                               decoration: InputDecoration(
                                                 isDense: true,
@@ -1557,6 +1738,7 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                 enabledBorder: InputBorder.none,
@@ -1572,9 +1754,11 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                               textAlign: TextAlign.end,
+                                              minLines: null,
                                               keyboardType:
                                                   TextInputType.number,
                                               validator: _model
@@ -1589,7 +1773,13 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                                           Text(
                                             '日',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ].divide(const SizedBox(width: 4.0)),
                                       ),
@@ -1601,99 +1791,286 @@ class _TsunagariCreateWidgetState extends State<TsunagariCreateWidget> {
                           ),
                         ),
                       ),
-                      FFButtonWidget(
-                        onPressed: !((_model.familyNameController.text != '') &&
-                                (_model.familyNameKanaController.text !=
-                                        '') &&
-                                (_model.givenNameController.text != '') &&
-                                (_model.givenNameKanaController.text !=
-                                        '') &&
-                                (_model.relationsValue != null &&
-                                    _model.relationsValue != '') &&
-                                (_model.deathAnniversaryYearController.text !=
-                                        '') &&
-                                (_model.deathAnniversaryMonthController
-                                            .text !=
-                                        '') &&
-                                (_model.textController8.text != '') &&
-                                (_model.originValue != null &&
-                                    _model.originValue != '') &&
-                                (_model.nickNameController.text != ''))
-                            ? null
-                            : () async {
-                                setState(() {
-                                  FFAppState().temporalTsunagariData =
-                                      TsunagarisStruct(
-                                    name:
-                                        '${_model.familyNameController.text} ${_model.givenNameController.text}',
-                                    nakeKana:
-                                        '${_model.familyNameKanaController.text} ${_model.givenNameKanaController.text}',
-                                    nickName: _model.nickNameController.text,
-                                    relation: _model.relationsValue,
-                                    deathAnniversary: functions.convertEraToDate(
-                                        _model.selectedWareki1,
-                                        int.parse(_model
-                                            .deathAnniversaryYearController
-                                            .text),
-                                        int.parse(_model
-                                            .deathAnniversaryMonthController
-                                            .text),
-                                        int.parse(_model.textController8.text)),
-                                    birthDate: (_model.birthDateYearController
-                                                        .text !=
-                                                    '') &&
-                                            (_model.birthDateMonthController.text !=
-                                                    '') &&
-                                            (_model.birthDateDateController.text !=
-                                                    '')
-                                        ? functions.convertEraToDate(
-                                            _model.selectedWareki2,
-                                            int.parse(_model.birthDateYearController.text),
-                                            int.parse(_model.birthDateMonthController.text),
-                                            int.parse(_model.birthDateDateController.text))
-                                        : null,
-                                    createdAt: getCurrentTimestamp,
-                                    origin: _model.originValue,
-                                  );
-                                });
+                      Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          FFButtonWidget(
+                            onPressed: !((_model.familyNameController.text !=
+                                            '') &&
+                                    (_model.familyNameKanaController.text !=
+                                            '') &&
+                                    (_model.givenNameController.text !=
+                                            '') &&
+                                    (_model.givenNameKanaController.text !=
+                                            '') &&
+                                    (_model.relationsValue != null &&
+                                        _model.relationsValue != '') &&
+                                    (_model.originValue != null &&
+                                        _model.originValue != '') &&
+                                    (_model.nickNameController.text != ''))
+                                ? null
+                                : () async {
+                                    setState(() {
+                                      FFAppState().temporalTsunagariData =
+                                          TsunagarisStruct(
+                                        name:
+                                            '${_model.familyNameController.text} ${_model.givenNameController.text}',
+                                        nakeKana:
+                                            '${_model.familyNameKanaController.text} ${_model.givenNameKanaController.text}',
+                                        nickName:
+                                            _model.nickNameController.text,
+                                        relation: _model.relationsValue,
+                                        deathAnniversary: functions.convertEraToDate(
+                                            _model.selectedWareki1,
+                                            int.parse(_model
+                                                .deathAnniversaryYearController
+                                                .text),
+                                            int.parse(_model
+                                                .deathAnniversaryMonthController
+                                                .text),
+                                            int.parse(_model
+                                                .deathAnniversaryDateController
+                                                .text)),
+                                        birthDate: (_model
+                                                            .birthDateYearController
+                                                            .text !=
+                                                        '') &&
+                                                (_model.birthDateMonthController
+                                                            .text !=
+                                                        '') &&
+                                                (_model.birthDateDateController
+                                                            .text !=
+                                                        '')
+                                            ? functions.convertEraToDate(
+                                                _model.selectedWareki2,
+                                                int.parse(_model.birthDateYearController.text),
+                                                int.parse(_model.birthDateMonthController.text),
+                                                int.parse(_model.birthDateDateController.text))
+                                            : null,
+                                        createdAt: getCurrentTimestamp,
+                                        origin: _model.originValue,
+                                      );
+                                    });
 
-                                context.pushNamed(
-                                  'GraveList',
-                                  queryParameters: {
-                                    'targetTsunagariName': serializeParam(
-                                      FFAppState()
-                                          .temporalTsunagariData
-                                          .nickName,
-                                      ParamType.String,
-                                    ),
-                                  }.withoutNulls,
-                                );
-                              },
-                        text: 'お墓をリンク',
-                        options: FFButtonOptions(
-                          width: double.infinity,
-                          height: 48.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              24.0, 0.0, 24.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primary,
-                          textStyle:
-                              FlutterFlowTheme.of(context).bodyLarge.override(
+                                    context.pushNamed(
+                                      'GraveList',
+                                      queryParameters: {
+                                        'targetTsunagariName': serializeParam(
+                                          FFAppState()
+                                              .temporalTsunagariData
+                                              .nickName,
+                                          ParamType.String,
+                                        ),
+                                      }.withoutNulls,
+                                    );
+                                  },
+                            text: 'お墓をリンク',
+                            options: FFButtonOptions(
+                              width: double.infinity,
+                              height: 48.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  24.0, 0.0, 24.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).primary,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
                                     fontFamily: 'Rounded Mgen plus 2cp',
+                                    color: const Color(0xFF37542D),
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: false,
                                   ),
-                          elevation: 0.0,
-                          borderSide: const BorderSide(
-                            color: Colors.transparent,
-                            width: 0.0,
+                              elevation: 0.0,
+                              borderSide: const BorderSide(
+                                color: Colors.transparent,
+                                width: 0.0,
+                              ),
+                              borderRadius: BorderRadius.circular(1000.0),
+                              disabledColor: const Color(0x4DADE09B),
+                              disabledTextColor: const Color(0x4D37542D),
+                            ),
+                            showLoadingIndicator: false,
                           ),
-                          borderRadius: BorderRadius.circular(1000.0),
-                          disabledColor: const Color(0x4DADE09B),
-                          disabledTextColor: const Color(0x4D37542D),
-                        ),
-                        showLoadingIndicator: false,
+                          FFButtonWidget(
+                            onPressed: !((_model.familyNameController.text !=
+                                            '') &&
+                                    (_model.familyNameKanaController.text !=
+                                            '') &&
+                                    (_model.givenNameController.text !=
+                                            '') &&
+                                    (_model.givenNameKanaController.text !=
+                                            '') &&
+                                    (_model.relationsValue != null &&
+                                        _model.relationsValue != '') &&
+                                    (_model.originValue != null &&
+                                        _model.originValue != '') &&
+                                    (_model.nickNameController.text != ''))
+                                ? null
+                                : () async {
+                                    setState(() {
+                                      FFAppState().temporalTsunagariData =
+                                          TsunagarisStruct(
+                                        name:
+                                            '${_model.familyNameController.text} ${_model.givenNameController.text}',
+                                        nakeKana:
+                                            '${_model.familyNameKanaController.text} ${_model.givenNameKanaController.text}',
+                                        nickName:
+                                            _model.nickNameController.text,
+                                        relation: _model.relationsValue,
+                                        deathAnniversary: (_model.deathAnniversaryYearController.text !=
+                                                        '') &&
+                                                (_model.deathAnniversaryMonthController
+                                                            .text !=
+                                                        '') &&
+                                                (_model.deathAnniversaryDateController
+                                                            .text !=
+                                                        '')
+                                            ? functions.convertEraToDate(
+                                                _model.selectedWareki1,
+                                                int.parse(_model.deathAnniversaryYearController.text),
+                                                int.parse(_model.deathAnniversaryMonthController.text),
+                                                int.parse(_model.deathAnniversaryDateController.text))
+                                            : null,
+                                        birthDate: (_model
+                                                            .birthDateYearController
+                                                            .text !=
+                                                        '') &&
+                                                (_model.birthDateMonthController
+                                                            .text !=
+                                                        '') &&
+                                                (_model.birthDateDateController
+                                                            .text !=
+                                                        '')
+                                            ? functions.convertEraToDate(
+                                                _model.selectedWareki2,
+                                                int.parse(_model.birthDateYearController.text),
+                                                int.parse(_model.birthDateMonthController.text),
+                                                int.parse(_model.birthDateDateController.text))
+                                            : null,
+                                        createdAt: getCurrentTimestamp,
+                                        origin: _model.originValue,
+                                      );
+                                    });
+
+                                    var tsunagarisRecordReference =
+                                        TsunagarisRecord.collection.doc();
+                                    await tsunagarisRecordReference
+                                        .set(createTsunagarisRecordData(
+                                      name: FFAppState()
+                                          .temporalTsunagariData
+                                          .name,
+                                      nameKana: FFAppState()
+                                          .temporalTsunagariData
+                                          .nakeKana,
+                                      nickName: FFAppState()
+                                          .temporalTsunagariData
+                                          .nickName,
+                                      relation: FFAppState()
+                                          .temporalTsunagariData
+                                          .relation,
+                                      deathAnniversary: FFAppState()
+                                          .temporalTsunagariData
+                                          .deathAnniversary,
+                                      birthDate: FFAppState()
+                                          .temporalTsunagariData
+                                          .birthDate,
+                                      createdAt: FFAppState()
+                                          .temporalTsunagariData
+                                          .createdAt,
+                                      origin: FFAppState()
+                                          .temporalTsunagariData
+                                          .origin,
+                                      backImage:
+                                          FFAppState().defaultTsunagariBGImage,
+                                      iconImage:
+                                          FFAppState().defaultTsunagariIcon,
+                                    ));
+                                    _model.targetTsunagari =
+                                        TsunagarisRecord.getDocumentFromData(
+                                            createTsunagarisRecordData(
+                                              name: FFAppState()
+                                                  .temporalTsunagariData
+                                                  .name,
+                                              nameKana: FFAppState()
+                                                  .temporalTsunagariData
+                                                  .nakeKana,
+                                              nickName: FFAppState()
+                                                  .temporalTsunagariData
+                                                  .nickName,
+                                              relation: FFAppState()
+                                                  .temporalTsunagariData
+                                                  .relation,
+                                              deathAnniversary: FFAppState()
+                                                  .temporalTsunagariData
+                                                  .deathAnniversary,
+                                              birthDate: FFAppState()
+                                                  .temporalTsunagariData
+                                                  .birthDate,
+                                              createdAt: FFAppState()
+                                                  .temporalTsunagariData
+                                                  .createdAt,
+                                              origin: FFAppState()
+                                                  .temporalTsunagariData
+                                                  .origin,
+                                              backImage: FFAppState()
+                                                  .defaultTsunagariBGImage,
+                                              iconImage: FFAppState()
+                                                  .defaultTsunagariIcon,
+                                            ),
+                                            tsunagarisRecordReference);
+
+                                    await currentUserReference!.update({
+                                      ...mapToFirestore(
+                                        {
+                                          'tsunagaris': FieldValue.arrayUnion([
+                                            _model.targetTsunagari?.reference
+                                          ]),
+                                        },
+                                      ),
+                                    });
+
+                                    context.goNamed(
+                                      'TsunagariDetail',
+                                      queryParameters: {
+                                        'tsunagariDocRef': serializeParam(
+                                          _model.targetTsunagari?.reference,
+                                          ParamType.DocumentReference,
+                                        ),
+                                      }.withoutNulls,
+                                    );
+
+                                    setState(() {});
+                                  },
+                            text: 'あとでリンクする',
+                            options: FFButtonOptions(
+                              width: double.infinity,
+                              height: 48.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  24.0, 0.0, 24.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'Rounded Mgen plus 2cp',
+                                    color: const Color(0xFF37542D),
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                    lineHeight: 1.485,
+                                  ),
+                              elevation: 0.0,
+                              borderSide: const BorderSide(
+                                width: 0.0,
+                              ),
+                              borderRadius: BorderRadius.circular(1000.0),
+                            ),
+                            showLoadingIndicator: false,
+                          ),
+                        ].divide(const SizedBox(height: 8.0)),
                       ),
                     ]
                         .divide(const SizedBox(height: 24.0))

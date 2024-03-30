@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -115,8 +117,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/graveList',
           requireAuth: true,
           builder: (context, params) => GraveListWidget(
-            targetTsunagariName:
-                params.getParam('targetTsunagariName', ParamType.String),
+            targetTsunagariName: params.getParam(
+              'targetTsunagariName',
+              ParamType.String,
+            ),
           ),
         ),
         FFRoute(
@@ -125,8 +129,15 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           requireAuth: true,
           builder: (context, params) => GraveLocationCreateWidget(
             graveRef: params.getParam(
-                'graveRef', ParamType.DocumentReference, false, ['Graves']),
-            tsunagariName: params.getParam('tsunagariName', ParamType.String),
+              'graveRef',
+              ParamType.DocumentReference,
+              false,
+              ['Graves'],
+            ),
+            tsunagariName: params.getParam(
+              'tsunagariName',
+              ParamType.String,
+            ),
           ),
         ),
         FFRoute(
@@ -134,7 +145,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/graveCreate',
           requireAuth: true,
           builder: (context, params) => GraveCreateWidget(
-            tsunagariName: params.getParam('tsunagariName', ParamType.String),
+            tsunagariName: params.getParam(
+              'tsunagariName',
+              ParamType.String,
+            ),
           ),
         ),
         FFRoute(
@@ -143,22 +157,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           requireAuth: true,
           builder: (context, params) => ChoicePlanWidget(
             graveRef: params.getParam(
-                'graveRef', ParamType.DocumentReference, false, ['Graves']),
-            locationRef: params.getParam('locationRef',
-                ParamType.DocumentReference, false, ['Locations']),
+              'graveRef',
+              ParamType.DocumentReference,
+              false,
+              ['Graves'],
+            ),
+            locationRef: params.getParam(
+              'locationRef',
+              ParamType.DocumentReference,
+              false,
+              ['Locations'],
+            ),
           ),
-        ),
-        FFRoute(
-          name: 'GraveListPageSample',
-          path: '/graveListPageSample',
-          requireAuth: true,
-          builder: (context, params) => const GraveListPageSampleWidget(),
-        ),
-        FFRoute(
-          name: 'GraveCreateSample',
-          path: '/graveCreateSample',
-          requireAuth: true,
-          builder: (context, params) => const GraveCreateSampleWidget(),
         ),
         FFRoute(
           name: 'TsunagariList',
@@ -171,8 +181,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/tsunagariEdit',
           requireAuth: true,
           builder: (context, params) => TsunagariEditWidget(
-            tsunagariDocRef: params.getParam('tsunagariDocRef',
-                ParamType.DocumentReference, false, ['Tsunagaris']),
+            tsunagariDocRef: params.getParam(
+              'tsunagariDocRef',
+              ParamType.DocumentReference,
+              false,
+              ['Tsunagaris'],
+            ),
           ),
         ),
         FFRoute(
@@ -180,8 +194,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/tsunagariDetail',
           requireAuth: true,
           builder: (context, params) => TsunagariDetailWidget(
-            tsunagariDocRef: params.getParam('tsunagariDocRef',
-                ParamType.DocumentReference, false, ['Tsunagaris']),
+            tsunagariDocRef: params.getParam(
+              'tsunagariDocRef',
+              ParamType.DocumentReference,
+              false,
+              ['Tsunagaris'],
+            ),
           ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
@@ -302,6 +320,7 @@ class FFParameters {
     ParamType type, [
     bool isList = false,
     List<String>? collectionNamePath,
+    StructBuilder<T>? structBuilder,
   ]) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -315,8 +334,13 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam<T>(param, type, isList,
-        collectionNamePath: collectionNamePath);
+    return deserializeParam<T>(
+      param,
+      type,
+      isList,
+      collectionNamePath: collectionNamePath,
+      structBuilder: structBuilder,
+    );
   }
 }
 

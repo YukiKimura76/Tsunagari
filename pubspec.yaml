@@ -155,15 +155,9 @@ flutter:
         - asset: assets/fonts/rounded-mgenplus-2cp-black.ttf
           weight: 900
 
-    - family: Icomoon
+    - family: CustomIcon
       fonts:
-        - asset: assets/fonts/icomoon.ttf
-    - family: Clean
-      fonts:
-        - asset: assets/fonts/clean.ttf
-    - family: Icon
-      fonts:
-        - asset: assets/fonts/icon.ttf
+        - asset: assets/fonts/customIcon.ttf
 
   
   # An image asset can refer to one or more resolution-specific "variants", see

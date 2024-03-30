@@ -65,7 +65,13 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
                         alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           'ツナガリへようこそ',
-                          style: FlutterFlowTheme.of(context).headlineMedium,
+                          style: FlutterFlowTheme.of(context)
+                              .headlineMedium
+                              .override(
+                                fontFamily: 'Rounded Mgen plus 2cp',
+                                letterSpacing: 0.0,
+                                useGoogleFonts: false,
+                              ),
                         ),
                       ),
                     ),
@@ -82,7 +88,11 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
                       alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Text(
                         '登録が完了しました。\n早速供養をしたい人を追加しましょう！',
-                        style: FlutterFlowTheme.of(context).bodyMedium,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Rounded Mgen plus 2cp',
+                              letterSpacing: 0.0,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ),
                     Column(
@@ -104,6 +114,7 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
                             textStyle:
                                 FlutterFlowTheme.of(context).bodyLarge.override(
                                       fontFamily: 'Rounded Mgen plus 2cp',
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: false,
                                     ),
@@ -129,7 +140,12 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyLarge.override(
+                                      fontFamily: 'Rounded Mgen plus 2cp',
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
                             elevation: 0.0,
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context)
@@ -161,7 +177,12 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyLarge.override(
+                                      fontFamily: 'Rounded Mgen plus 2cp',
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
                             elevation: 0.0,
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context)
@@ -185,7 +206,12 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyLarge.override(
+                                      fontFamily: 'Rounded Mgen plus 2cp',
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
                             elevation: 0.0,
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context)
@@ -213,7 +239,12 @@ class _WelcomePageWidgetState extends State<WelcomePageWidget> {
                                 0.0, 0.0, 0.0, 0.0),
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
-                            textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                            textStyle:
+                                FlutterFlowTheme.of(context).bodyLarge.override(
+                                      fontFamily: 'Rounded Mgen plus 2cp',
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
                             elevation: 0.0,
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context)

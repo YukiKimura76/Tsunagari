@@ -83,6 +83,7 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                   .override(
                                     fontFamily: 'Rounded Mgen plus 2cp',
                                     color: FlutterFlowTheme.of(context).accent1,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                             ),
@@ -179,6 +180,8 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                                                         'Rounded Mgen plus 2cp',
                                                                     fontSize:
                                                                         18.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     useGoogleFonts:
                                                                         false,
                                                                     lineHeight:
@@ -194,6 +197,8 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                                                   .override(
                                                                     fontFamily:
                                                                         'Rounded Mgen plus 2cp',
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     useGoogleFonts:
                                                                         false,
                                                                     lineHeight:
@@ -235,7 +240,7 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                                                           [
                                                                         Icon(
                                                                           FFIcons
-                                                                              .kflowerLow,
+                                                                              .k16Flower1,
                                                                           color:
                                                                               FlutterFlowTheme.of(context).secondaryText,
                                                                           size:
@@ -252,6 +257,7 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                                                               .override(
                                                                                 fontFamily: 'Rounded Mgen plus 2cp',
                                                                                 fontSize: 12.0,
+                                                                                letterSpacing: 0.0,
                                                                                 useGoogleFonts: false,
                                                                               ),
                                                                         ),
@@ -273,6 +279,8 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                                                                 'Rounded Mgen plus 2cp',
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             useGoogleFonts:
                                                                                 false,
                                                                           ),
@@ -376,6 +384,7 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                                                                             columnLocationsRecord.name,
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'Rounded Mgen plus 2cp',
+                                                                                                  letterSpacing: 0.0,
                                                                                                   fontWeight: FontWeight.w500,
                                                                                                   useGoogleFonts: false,
                                                                                                   lineHeight: 1.485,
@@ -411,7 +420,7 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       children: [
                                                                                                         Icon(
-                                                                                                          FFIcons.kflowerLow,
+                                                                                                          FFIcons.k16Flower2,
                                                                                                           color: FlutterFlowTheme.of(context).secondaryText,
                                                                                                           size: 16.0,
                                                                                                         ),
@@ -452,6 +461,7 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                                                                           color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           textStyle: FlutterFlowTheme.of(context).bodyLarge.override(
                                                                                                 fontFamily: 'Rounded Mgen plus 2cp',
+                                                                                                letterSpacing: 0.0,
                                                                                                 fontWeight: FontWeight.w500,
                                                                                                 useGoogleFonts: false,
                                                                                               ),
@@ -531,6 +541,8 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                                                         .override(
                                                                           fontFamily:
                                                                               'Rounded Mgen plus 2cp',
+                                                                          letterSpacing:
+                                                                              0.0,
                                                                           fontWeight:
                                                                               FontWeight.w500,
                                                                           useGoogleFonts:
@@ -627,8 +639,13 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    textStyle:
-                                        FlutterFlowTheme.of(context).bodyLarge,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'Rounded Mgen plus 2cp',
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
                                     elevation: 0.0,
                                     borderSide: BorderSide(
                                       color:
@@ -696,6 +713,7 @@ class _GraveListWidgetState extends State<GraveListWidget> {
                                       .bodyLarge
                                       .override(
                                         fontFamily: 'Rounded Mgen plus 2cp',
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: false,
                                       ),

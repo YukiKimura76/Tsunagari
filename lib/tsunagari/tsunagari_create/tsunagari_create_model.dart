@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'tsunagari_create_widget.dart' show TsunagariCreateWidget;
@@ -96,10 +97,11 @@ class TsunagariCreateModel extends FlutterFlowModel<TsunagariCreateWidget> {
   TextEditingController? deathAnniversaryMonthController;
   String? Function(BuildContext, String?)?
       deathAnniversaryMonthControllerValidator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController8;
-  String? Function(BuildContext, String?)? textController8Validator;
+  // State field(s) for deathAnniversaryDate widget.
+  FocusNode? deathAnniversaryDateFocusNode;
+  TextEditingController? deathAnniversaryDateController;
+  String? Function(BuildContext, String?)?
+      deathAnniversaryDateControllerValidator;
   // State field(s) for DropDown widget.
   String? dropDownValue2;
   FormFieldController<String>? dropDownValueController2;
@@ -115,8 +117,8 @@ class TsunagariCreateModel extends FlutterFlowModel<TsunagariCreateWidget> {
   FocusNode? birthDateDateFocusNode;
   TextEditingController? birthDateDateController;
   String? Function(BuildContext, String?)? birthDateDateControllerValidator;
-
-  /// Initialization and disposal methods.
+  // Stores action output result for [Backend Call - Create Document] action in Button widget.
+  TsunagarisRecord? targetTsunagari;
 
   @override
   void initState(BuildContext context) {
@@ -151,8 +153,8 @@ class TsunagariCreateModel extends FlutterFlowModel<TsunagariCreateWidget> {
     deathAnniversaryMonthFocusNode?.dispose();
     deathAnniversaryMonthController?.dispose();
 
-    textFieldFocusNode?.dispose();
-    textController8?.dispose();
+    deathAnniversaryDateFocusNode?.dispose();
+    deathAnniversaryDateController?.dispose();
 
     birthDateYearFocusNode?.dispose();
     birthDateYearController?.dispose();
@@ -163,8 +165,4 @@ class TsunagariCreateModel extends FlutterFlowModel<TsunagariCreateWidget> {
     birthDateDateFocusNode?.dispose();
     birthDateDateController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

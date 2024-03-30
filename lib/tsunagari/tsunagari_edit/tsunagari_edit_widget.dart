@@ -130,6 +130,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                       fontFamily: 'Rounded Mgen plus 2cp',
                                       color:
                                           FlutterFlowTheme.of(context).accent1,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
                               ),
@@ -156,6 +157,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           fontFamily: 'Rounded Mgen plus 2cp',
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     iconColor: FlutterFlowTheme.of(context)
@@ -174,6 +176,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                         .override(
                                           fontFamily: 'Rounded Mgen plus 2cp',
                                           color: const Color(0xFF37542D),
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     iconColor: const Color(0xFF37542D),
@@ -232,6 +235,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .primaryText,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                             ),
@@ -251,6 +255,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .secondaryText,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                             ),
@@ -382,6 +387,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                               elevation: 0.0,
@@ -486,6 +492,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         useGoogleFonts: false,
@@ -522,6 +529,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryText,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -649,6 +657,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                               elevation: 0.0,
@@ -751,6 +760,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         useGoogleFonts: false,
@@ -783,7 +793,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           child: Text(
                                             '姓 *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -803,11 +819,18 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: '鈴木',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -819,6 +842,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -893,8 +917,10 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .familyNameControllerValidator
                                             .asValidator(context),
@@ -915,7 +941,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           child: Text(
                                             '姓(かな) *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -936,11 +968,18 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: 'すずき',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -952,6 +991,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -1027,8 +1067,10 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .familyNameKanaControllerValidator
                                             .asValidator(context),
@@ -1049,7 +1091,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           child: Text(
                                             '名 *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -1069,11 +1117,18 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: '花子',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -1085,6 +1140,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -1159,8 +1215,10 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .givenNameControllerValidator
                                             .asValidator(context),
@@ -1181,7 +1239,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           child: Text(
                                             '名(かな) *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -1202,11 +1266,18 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: 'はなこ',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -1218,6 +1289,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -1293,8 +1365,10 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .givenNameKanaControllerValidator
                                             .asValidator(context),
@@ -1315,7 +1389,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           child: Text(
                                             '関係性 *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -1348,6 +1428,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
                                         hintText: '関係性を選択',
@@ -1386,7 +1467,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           child: Text(
                                             '呼び名 *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -1403,11 +1490,18 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           const Duration(milliseconds: 100),
                                           () => setState(() {}),
                                         ),
+                                        autofocus: false,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .labelMedium,
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily:
+                                                        'Rounded Mgen plus 2cp',
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
                                           hintText: '例：おじいちゃん、ばぁば',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
@@ -1419,6 +1513,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .accent2,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
@@ -1491,8 +1586,10 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                               fontFamily:
                                                   'Rounded Mgen plus 2cp',
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
+                                        minLines: null,
                                         validator: _model
                                             .nickNameControllerValidator
                                             .asValidator(context),
@@ -1513,7 +1610,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           child: Text(
                                             '父方・母方 *',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -1548,6 +1651,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryText,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                 iconColor:
@@ -1574,6 +1678,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                               'Rounded Mgen plus 2cp',
                                                           color:
                                                               const Color(0xFF37542D),
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                 iconColor: const Color(0xFF37542D),
@@ -1626,9 +1731,15 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           height: 22.0,
                                           decoration: const BoxDecoration(),
                                           child: Text(
-                                            '命日 *',
+                                            '命日',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -1679,6 +1790,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.normal,
                                                         useGoogleFonts: false,
@@ -1746,7 +1858,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                 height: 40.0,
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                                 hintText: '和暦',
                                                 icon: Icon(
                                                   Icons
@@ -1813,7 +1931,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyMedium,
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Rounded Mgen plus 2cp',
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
+                                                      ),
                                                 ),
                                               Container(
                                                 width: 44.0,
@@ -1842,6 +1966,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     const Duration(milliseconds: 100),
                                                     () => setState(() {}),
                                                   ),
+                                                  autofocus: false,
                                                   obscureText: false,
                                                   decoration: InputDecoration(
                                                     isDense: true,
@@ -1862,6 +1987,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                     enabledBorder:
@@ -1880,8 +2006,10 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
+                                                  minLines: null,
                                                   keyboardType:
                                                       TextInputType.number,
                                                   validator: _model
@@ -1893,7 +2021,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                 '年',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                               Container(
                                                 width: 28.0,
@@ -1922,6 +2056,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     const Duration(milliseconds: 100),
                                                     () => setState(() {}),
                                                   ),
+                                                  autofocus: false,
                                                   obscureText: false,
                                                   decoration: InputDecoration(
                                                     isDense: true,
@@ -1936,6 +2071,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                     enabledBorder:
@@ -1954,9 +2090,11 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                                   textAlign: TextAlign.end,
+                                                  minLines: null,
                                                   keyboardType:
                                                       TextInputType.number,
                                                   validator: _model
@@ -1968,7 +2106,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                 '月',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                               Container(
                                                 width: 28.0,
@@ -1997,6 +2141,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     const Duration(milliseconds: 100),
                                                     () => setState(() {}),
                                                   ),
+                                                  autofocus: false,
                                                   obscureText: false,
                                                   decoration: InputDecoration(
                                                     isDense: true,
@@ -2011,6 +2156,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                     enabledBorder:
@@ -2029,9 +2175,11 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                                   textAlign: TextAlign.end,
+                                                  minLines: null,
                                                   keyboardType:
                                                       TextInputType.number,
                                                   validator: _model
@@ -2043,7 +2191,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                 '日',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                             ].divide(const SizedBox(width: 4.0)),
                                           ),
@@ -2065,7 +2219,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           child: Text(
                                             '生年月日',
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily:
+                                                      'Rounded Mgen plus 2cp',
+                                                  letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
+                                                ),
                                           ),
                                         ),
                                       ),
@@ -2116,6 +2276,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 14.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.normal,
                                                         useGoogleFonts: false,
@@ -2183,7 +2344,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                 height: 40.0,
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                                 hintText: '和暦',
                                                 icon: Icon(
                                                   Icons
@@ -2250,7 +2417,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyMedium,
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Rounded Mgen plus 2cp',
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
+                                                      ),
                                                 ),
                                               SizedBox(
                                                 width: 46.0,
@@ -2276,6 +2449,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     const Duration(milliseconds: 100),
                                                     () => setState(() {}),
                                                   ),
+                                                  autofocus: false,
                                                   obscureText: false,
                                                   decoration: InputDecoration(
                                                     isDense: true,
@@ -2296,6 +2470,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                     enabledBorder:
@@ -2314,8 +2489,10 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
+                                                  minLines: null,
                                                   maxLength:
                                                       _model.selectedWareki2 !=
                                                                   null &&
@@ -2339,7 +2516,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                 '年',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                               SizedBox(
                                                 width: 22.0,
@@ -2365,6 +2548,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     const Duration(milliseconds: 100),
                                                     () => setState(() {}),
                                                   ),
+                                                  autofocus: false,
                                                   obscureText: false,
                                                   decoration: InputDecoration(
                                                     isDense: true,
@@ -2379,6 +2563,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                     enabledBorder:
@@ -2397,9 +2582,11 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                                   textAlign: TextAlign.end,
+                                                  minLines: null,
                                                   keyboardType:
                                                       TextInputType.number,
                                                   validator: _model
@@ -2411,7 +2598,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                 '月',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                               SizedBox(
                                                 width: 22.0,
@@ -2437,6 +2630,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                     const Duration(milliseconds: 100),
                                                     () => setState(() {}),
                                                   ),
+                                                  autofocus: false,
                                                   obscureText: false,
                                                   decoration: InputDecoration(
                                                     isDense: true,
@@ -2451,6 +2645,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                                   .of(context)
                                                               .accent2,
                                                           fontSize: 16.0,
+                                                          letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
                                                     enabledBorder:
@@ -2469,9 +2664,11 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                                   textAlign: TextAlign.end,
+                                                  minLines: null,
                                                   keyboardType:
                                                       TextInputType.number,
                                                   validator: _model
@@ -2483,7 +2680,13 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                                 '日',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
                                             ].divide(const SizedBox(width: 4.0)),
                                           ),
@@ -2506,14 +2709,6 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                             '') &&
                                     (_model.relationsValue != null &&
                                         _model.relationsValue != '') &&
-                                    (_model.deathAnniversaryYearController.text !=
-                                            '') &&
-                                    (_model.deathAnniversaryMonthController
-                                                .text !=
-                                            '') &&
-                                    (_model.deathAnniversaryDayController
-                                                .text !=
-                                            '') &&
                                     (_model.originChoiceValue != null &&
                                         _model.originChoiceValue != ''))
                                 ? null
@@ -2526,17 +2721,20 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                           '${_model.familyNameKanaController.text} ${_model.givenNameKanaController.text}',
                                       nickName: _model.nickNameController.text,
                                       relation: _model.relationsValue,
-                                      deathAnniversary: functions.convertEraToDate(
-                                          _model.selectedWareki1,
-                                          int.parse(_model
-                                              .deathAnniversaryYearController
-                                              .text),
-                                          int.parse(_model
-                                              .deathAnniversaryMonthController
-                                              .text),
-                                          int.parse(_model
-                                              .deathAnniversaryDayController
-                                              .text)),
+                                      deathAnniversary: (_model.deathAnniversaryYearController.text !=
+                                                      '') &&
+                                              (_model.deathAnniversaryMonthController
+                                                          .text !=
+                                                      '') &&
+                                              (_model.deathAnniversaryDayController
+                                                          .text !=
+                                                      '')
+                                          ? functions.convertEraToDate(
+                                              _model.selectedWareki1,
+                                              int.parse(_model.deathAnniversaryYearController.text),
+                                              int.parse(_model.deathAnniversaryMonthController.text),
+                                              int.parse(_model.deathAnniversaryDayController.text))
+                                          : null,
                                       birthDate: (_model.birthDateYearController
                                                           .text !=
                                                       '') &&
@@ -2575,6 +2773,7 @@ class _TsunagariEditWidgetState extends State<TsunagariEditWidget> {
                                   .bodyLarge
                                   .override(
                                     fontFamily: 'Rounded Mgen plus 2cp',
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: false,
                                   ),

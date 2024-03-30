@@ -102,8 +102,6 @@ class CreateUserInfoPageModel
     return null;
   }
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {
     textController1Validator = _textController1Validator;
@@ -139,8 +137,4 @@ class CreateUserInfoPageModel
     textFieldFocusNode7?.dispose();
     textController7?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

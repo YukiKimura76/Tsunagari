@@ -160,8 +160,6 @@ class GraveCreateModel extends FlutterFlowModel<GraveCreateWidget> {
   // Stores action output result for [Backend Call - Create Document] action in Button widget.
   GravesRecord? graveRefwithMap;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {
     textController1Validator = _textController1Validator;
@@ -213,8 +211,4 @@ class GraveCreateModel extends FlutterFlowModel<GraveCreateWidget> {
     textFieldFocusNode11?.dispose();
     textController11?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

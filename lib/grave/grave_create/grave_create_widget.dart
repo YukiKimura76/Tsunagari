@@ -117,6 +117,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                 .override(
                                   fontFamily: 'Rounded Mgen plus 2cp',
                                   color: FlutterFlowTheme.of(context).accent1,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                           ),
@@ -149,6 +150,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                     .override(
                                       fontFamily: 'Rounded Mgen plus 2cp',
                                       color: const Color(0xFF37542D),
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.normal,
                                       useGoogleFonts: false,
                                     ),
@@ -186,6 +188,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                     .override(
                                       fontFamily: 'Rounded Mgen plus 2cp',
                                       color: const Color(0xFF37542D),
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.normal,
                                       useGoogleFonts: false,
                                     ),
@@ -223,7 +226,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           '墓地名 *',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController1,
@@ -234,11 +243,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 2000),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '墓地名を検索',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -251,6 +267,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -331,8 +348,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController1Validator
                                               .asValidator(context),
@@ -349,7 +368,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           '郵便番号 *',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController2,
@@ -360,11 +385,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 100),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '123-4567',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -377,6 +409,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -450,8 +483,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController2Validator
                                               .asValidator(context),
@@ -468,7 +503,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           '都道府県*',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController3,
@@ -479,11 +520,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 100),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '検索',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -496,6 +544,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -572,8 +621,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController3Validator
                                               .asValidator(context),
@@ -590,7 +641,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           '市町村 *',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController4,
@@ -601,11 +658,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 100),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: 'ツナガリ市カゾク町',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -618,6 +682,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -691,8 +756,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController4Validator
                                               .asValidator(context),
@@ -709,7 +776,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           '番地 *',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController5,
@@ -720,11 +793,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 100),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '1-2-3',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -737,6 +817,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -810,8 +891,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController5Validator
                                               .asValidator(context),
@@ -828,7 +911,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           'お墓の区画番号 *',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController6,
@@ -839,11 +928,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 100),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '12',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -856,6 +952,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -929,8 +1026,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController6Validator
                                               .asValidator(context),
@@ -947,7 +1046,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           'お墓の表記 *',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController7,
@@ -958,11 +1063,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 100),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '例：ツナガリ家之墓',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -975,6 +1087,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -1048,8 +1161,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController7Validator
                                               .asValidator(context),
@@ -1216,6 +1331,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                       .override(
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         useGoogleFonts: false,
@@ -1256,7 +1372,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           '位置検索 *',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController8,
@@ -1267,11 +1389,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 2000),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '墓地の位置を検索',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -1284,6 +1413,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -1364,8 +1494,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController8Validator
                                               .asValidator(context),
@@ -1491,6 +1623,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryText,
+                                                          letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                           useGoogleFonts: false,
@@ -1522,7 +1655,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           '墓地名/呼び名 *',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController9,
@@ -1533,11 +1672,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 100),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: 'ツナガリ山のお墓',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -1550,6 +1696,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -1623,8 +1770,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController9Validator
                                               .asValidator(context),
@@ -1641,7 +1790,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           'お墓の区画番号 *',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController10,
@@ -1653,11 +1808,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 100),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '12',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -1670,6 +1832,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -1743,8 +1906,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController10Validator
                                               .asValidator(context),
@@ -1761,7 +1926,13 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                         Text(
                                           'お墓の表記 *',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    'Rounded Mgen plus 2cp',
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
                                         ),
                                         TextFormField(
                                           controller: _model.textController11,
@@ -1773,11 +1944,18 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                             const Duration(milliseconds: 100),
                                             () => setState(() {}),
                                           ),
+                                          autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
-                                                    .labelMedium,
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Rounded Mgen plus 2cp',
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
                                             hintText: '例：ツナガリ家之墓',
                                             hintStyle:
                                                 FlutterFlowTheme.of(context)
@@ -1790,6 +1968,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                                   context)
                                                               .accent2,
                                                       fontSize: 16.0,
+                                                      letterSpacing: 0.0,
                                                       useGoogleFonts: false,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
@@ -1863,8 +2042,10 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                 fontFamily:
                                                     'Rounded Mgen plus 2cp',
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
+                                          minLines: null,
                                           validator: _model
                                               .textController11Validator
                                               .asValidator(context),
@@ -2055,6 +2236,7 @@ class _GraveCreateWidgetState extends State<GraveCreateWidget> {
                                                       .override(
                                                         fontFamily:
                                                             'Rounded Mgen plus 2cp',
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         useGoogleFonts: false,

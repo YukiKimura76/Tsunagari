@@ -136,6 +136,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                             context)
                                                         .secondaryBackground,
                                                     fontSize: 24.0,
+                                                    letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
                                                     useGoogleFonts: false,
                                                   ),
@@ -152,6 +153,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                 .of(context)
                                                             .secondaryBackground,
                                                         fontSize: 16.0,
+                                                        letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
                                             ),
@@ -160,28 +162,33 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                         Row(
                                           mainAxisSize: MainAxisSize.min,
                                           children: [
-                                            Text(
-                                              dateTimeFormat(
-                                                'yyyy年MM月dd日',
-                                                stackTsunagarisRecord
-                                                    .deathAnniversary!,
-                                                locale:
-                                                    FFLocalizations.of(context)
-                                                        .languageCode,
+                                            if (stackTsunagarisRecord
+                                                    .deathAnniversary !=
+                                                null)
+                                              Text(
+                                                dateTimeFormat(
+                                                  'yyyy年MM月dd日没',
+                                                  stackTsunagarisRecord
+                                                      .deathAnniversary!,
+                                                  locale: FFLocalizations.of(
+                                                          context)
+                                                      .languageCode,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Rounded Mgen plus 2cp',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryBackground,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily:
-                                                        'Rounded Mgen plus 2cp',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryBackground,
-                                                    fontWeight: FontWeight.w500,
-                                                    useGoogleFonts: false,
-                                                  ),
-                                            ),
                                             if (stackTsunagarisRecord
                                                     .birthDate !=
                                                 null)
@@ -196,6 +203,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryBackground,
+                                                          letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                           useGoogleFonts: false,
@@ -301,6 +309,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                       .secondaryBackground,
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   useGoogleFonts:
                                                                       false,
                                                                   lineHeight:
@@ -327,6 +337,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                       .secondaryBackground,
                                                                   fontSize:
                                                                       18.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -367,6 +379,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                           0xFFD57B00),
                                                                       fontSize:
                                                                           12.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       useGoogleFonts:
                                                                           false,
                                                                       lineHeight:
@@ -401,6 +415,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                       .secondaryBackground,
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   useGoogleFonts:
                                                                       false,
                                                                   lineHeight:
@@ -431,6 +447,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                           .secondaryBackground,
                                                                       fontSize:
                                                                           18.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w500,
@@ -477,6 +495,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                           .secondaryBackground,
                                                                       fontSize:
                                                                           12.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       useGoogleFonts:
                                                                           false,
                                                                       lineHeight:
@@ -515,7 +535,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                               sigmaY: 10.0,
                                             ),
                                             child: Container(
-                                              width: double.infinity,
+                                              width: 326.0,
                                               height: 56.0,
                                               decoration: BoxDecoration(
                                                 color: const Color(0x26FFFFFF),
@@ -525,7 +545,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                               child: Padding(
                                                 padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
+                                                        20.0, 16.0, 20.0, 16.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -534,11 +554,10 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                           .spaceBetween,
                                                   children: [
                                                     Icon(
-                                                      FFIcons.kflowerMiddle,
+                                                      FFIcons.k24Flower2,
                                                       color: FlutterFlowTheme
                                                               .of(context)
                                                           .secondaryBackground,
-                                                      size: 24.0,
                                                     ),
                                                     Flexible(
                                                       child: Row(
@@ -562,6 +581,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryBackground,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -598,6 +619,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                       .accent2,
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   useGoogleFonts:
                                                                       false,
                                                                 ),
@@ -621,7 +644,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                               sigmaY: 10.0,
                                             ),
                                             child: Container(
-                                              width: double.infinity,
+                                              width: 326.0,
                                               height: 56.0,
                                               decoration: BoxDecoration(
                                                 color: const Color(0x26FFFFFF),
@@ -631,7 +654,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                               child: Padding(
                                                 padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
+                                                        20.0, 16.0, 20.0, 16.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -640,11 +663,10 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                           .spaceBetween,
                                                   children: [
                                                     Icon(
-                                                      FFIcons.kicon,
+                                                      FFIcons.k24Time,
                                                       color: FlutterFlowTheme
                                                               .of(context)
                                                           .secondaryBackground,
-                                                      size: 24.0,
                                                     ),
                                                     Flexible(
                                                       child: Row(
@@ -668,6 +690,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryBackground,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -688,6 +712,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                       .accent2,
                                                                   fontSize:
                                                                       12.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   useGoogleFonts:
                                                                       false,
                                                                 ),
@@ -711,7 +737,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                               sigmaY: 10.0,
                                             ),
                                             child: Container(
-                                              width: double.infinity,
+                                              width: 326.0,
                                               height: 56.0,
                                               decoration: BoxDecoration(
                                                 color: const Color(0x26FFFFFF),
@@ -721,7 +747,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                               child: Padding(
                                                 padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        12.0, 0.0, 12.0, 0.0),
+                                                        20.0, 16.0, 20.0, 16.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -729,30 +755,28 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                       MainAxisAlignment.start,
                                                   children: [
                                                     Icon(
-                                                      FFIcons.kicon,
+                                                      FFIcons.k24Time,
                                                       color: FlutterFlowTheme
                                                               .of(context)
                                                           .secondaryBackground,
-                                                      size: 24.0,
                                                     ),
                                                     Text(
                                                       '手を合わせる',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Rounded Mgen plus 2cp',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryBackground,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Rounded Mgen plus 2cp',
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryBackground,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                            useGoogleFonts:
+                                                                false,
+                                                          ),
                                                     ),
                                                   ].divide(
                                                       const SizedBox(width: 12.0)),
@@ -789,7 +813,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                 );
                                               },
                                               child: Container(
-                                                width: double.infinity,
+                                                width: 326.0,
                                                 height: 56.0,
                                                 decoration: BoxDecoration(
                                                   color: const Color(0x26FFFFFF),
@@ -799,8 +823,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                 ),
                                                 child: Padding(
                                                   padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          12.0, 0.0, 12.0, 0.0),
+                                                      .fromSTEB(20.0, 16.0,
+                                                          20.0, 16.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -808,11 +832,10 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                         MainAxisAlignment.start,
                                                     children: [
                                                       Icon(
-                                                        FFIcons.kvector,
+                                                        FFIcons.k24Edit,
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
-                                                        size: 24.0,
                                                       ),
                                                       Text(
                                                         'ツナガリ・お墓情報編集',
@@ -826,6 +849,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryBackground,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
@@ -967,7 +992,7 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                 }
                                               },
                                               child: Container(
-                                                width: double.infinity,
+                                                width: 326.0,
                                                 height: 56.0,
                                                 decoration: BoxDecoration(
                                                   color: const Color(0x26FFFFFF),
@@ -977,8 +1002,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                 ),
                                                 child: Padding(
                                                   padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          12.0, 0.0, 12.0, 0.0),
+                                                      .fromSTEB(20.0, 16.0,
+                                                          20.0, 16.0),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -986,12 +1011,11 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                         MainAxisAlignment.start,
                                                     children: [
                                                       Icon(
-                                                        FFIcons.kiconTrash,
+                                                        FFIcons.k24Trash,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .error,
-                                                        size: 24.0,
                                                       ),
                                                       Text(
                                                         'ツナガリ削除',
@@ -1005,6 +1029,8 @@ class _TsunagariDetailWidgetState extends State<TsunagariDetailWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryBackground,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
